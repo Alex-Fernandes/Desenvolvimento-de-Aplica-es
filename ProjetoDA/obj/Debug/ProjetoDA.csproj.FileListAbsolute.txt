@@ -1,0 +1,10 @@
+C:\Users\Afonso Araújo\source\repos\ProjetoDA\ProjetoDA\bin\Debug\ProjetoDA.exe.config
+C:\Users\Afonso Araújo\source\repos\ProjetoDA\ProjetoDA\bin\Debug\ProjetoDA.exe
+C:\Users\Afonso Araújo\source\repos\ProjetoDA\ProjetoDA\bin\Debug\ProjetoDA.pdb
+C:\Users\Afonso Araújo\source\repos\ProjetoDA\ProjetoDA\obj\Debug\ProjetoDA.csprojAssemblyReference.cache
+C:\Users\Afonso Araújo\source\repos\ProjetoDA\ProjetoDA\obj\Debug\ProjetoDA.Form1.resources
+C:\Users\Afonso Araújo\source\repos\ProjetoDA\ProjetoDA\obj\Debug\ProjetoDA.Properties.Resources.resources
+C:\Users\Afonso Araújo\source\repos\ProjetoDA\ProjetoDA\obj\Debug\ProjetoDA.csproj.GenerateResource.cache
+C:\Users\Afonso Araújo\source\repos\ProjetoDA\ProjetoDA\obj\Debug\ProjetoDA.csproj.CoreCompileInputs.cache
+C:\Users\Afonso Araújo\source\repos\ProjetoDA\ProjetoDA\obj\Debug\ProjetoDA.exe
+C:\Users\Afonso Araújo\source\repos\ProjetoDA\ProjetoDA\obj\Debug\ProjetoDA.pdb

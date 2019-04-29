@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="73c888ef558248ae8e8dd5130dadaeb9" Name="Diagram1" ZoomLevel="84" >
+        <EntityTypeShape EntityType="Model1.Cliente" Width="1.875" PointX="0.5" PointY="3.5" />
+        <EntityTypeShape EntityType="Model1.Venda" Width="1.5" PointX="5.25" PointY="3.25" />
+        <EntityTypeShape EntityType="Model1.Carro" Width="1.5" PointX="10.75" PointY="3.375" />
+        <EntityTypeShape EntityType="Model1.Aluguer" Width="1.5" PointX="5" PointY="6.375" />
+        <EntityTypeShape EntityType="Model1.Parcela" Width="1.5" PointX="4.25" PointY="1" />
+        <EntityTypeShape EntityType="Model1.Servico" Width="1.5" PointX="7.375" PointY="1.125" />
+        <EntityTypeShape EntityType="Model1.CarroVenda" Width="1.5" PointX="8.125" PointY="4.25" />
+        <EntityTypeShape EntityType="Model1.CarroAluguer" Width="1.5" PointX="10.625" PointY="6.375" />
+        <EntityTypeShape EntityType="Model1.CarroOficina" Width="1.5" PointX="10.5" PointY="0.5" />
+        <AssociationConnector Association="Model1.ClienteVenda" />
+        <AssociationConnector Association="Model1.ClienteAluguer" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="Model1.ClienteCarroOficina" />
+        <AssociationConnector Association="Model1.ParcelaServico" />
+        <AssociationConnector Association="Model1.ServicoCarroOficina" />
+        <AssociationConnector Association="Model1.AluguerCarroAluguer" />
+        <AssociationConnector Association="Model1.VendaCarroVenda" />
+        <InheritanceConnector EntityType="Model1.CarroOficina" />
+        <InheritanceConnector EntityType="Model1.CarroVenda" />
+        <InheritanceConnector EntityType="Model1.CarroAluguer" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
