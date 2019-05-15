@@ -8,3 +8,30 @@ C:\Users\Afonso Araújo\source\repos\ProjetoDA\ProjetoDA\obj\Debug\ProjetoDA.csp
 C:\Users\Afonso Araújo\source\repos\ProjetoDA\ProjetoDA\obj\Debug\ProjetoDA.csproj.CoreCompileInputs.cache
 C:\Users\Afonso Araújo\source\repos\ProjetoDA\ProjetoDA\obj\Debug\ProjetoDA.exe
 C:\Users\Afonso Araújo\source\repos\ProjetoDA\ProjetoDA\obj\Debug\ProjetoDA.pdb
+C:\Outros\Desenvolvimento-de-Aplica-es\ProjetoDA\bin\Debug\ProjetoDA.exe.config
+C:\Outros\Desenvolvimento-de-Aplica-es\ProjetoDA\bin\Debug\ProjetoDA.exe
+C:\Outros\Desenvolvimento-de-Aplica-es\ProjetoDA\bin\Debug\ProjetoDA.pdb
+C:\Outros\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.csprojAssemblyReference.cache
+C:\Outros\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.Form1.resources
+C:\Outros\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.Properties.Resources.resources
+C:\Outros\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.csproj.GenerateResource.cache
+C:\Outros\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.csproj.CoreCompileInputs.cache
+C:\Outros\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.exe
+C:\Outros\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.pdb
+D:\Desenvolvimento-de-Aplica-es\ProjetoDA\bin\Debug\ProjetoDA.exe.config
+D:\Desenvolvimento-de-Aplica-es\ProjetoDA\bin\Debug\ProjetoDA.exe
+D:\Desenvolvimento-de-Aplica-es\ProjetoDA\bin\Debug\ProjetoDA.pdb
+D:\Desenvolvimento-de-Aplica-es\ProjetoDA\bin\Debug\EntityFramework.dll
+D:\Desenvolvimento-de-Aplica-es\ProjetoDA\bin\Debug\EntityFramework.SqlServer.dll
+D:\Desenvolvimento-de-Aplica-es\ProjetoDA\bin\Debug\EntityFramework.xml
+D:\Desenvolvimento-de-Aplica-es\ProjetoDA\bin\Debug\EntityFramework.SqlServer.xml
+D:\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.csprojAssemblyReference.cache
+D:\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.MenuOficina.resources
+D:\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.MenuOriginal.resources
+D:\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.Properties.Resources.resources
+D:\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.csproj.GenerateResource.cache
+D:\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.csproj.CopyComplete
+D:\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.exe
+D:\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.pdb
+D:\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.MenuCliente.resources
