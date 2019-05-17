@@ -31,20 +31,39 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listBoxSelecionar_Cliente = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listBoxCarro_Oficina = new System.Windows.Forms.ListBox();
             this.buttonOficina_adicionar = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.listBoxCarro_Oficina = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonServicos_Criar = new System.Windows.Forms.Button();
+            this.comboBoxServicos = new System.Windows.Forms.ComboBox();
+            this.listBoxServicos = new System.Windows.Forms.ListBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBoxParecelas_Valor = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxParecelas_Descricao = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.listBoxParecelas = new System.Windows.Forms.ListBox();
+            this.label_nomeCliente = new System.Windows.Forms.Label();
+            this.label_NifCliente = new System.Windows.Forms.Label();
+            this.label_TelefoneCliente = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label_ValorTotalCliente = new System.Windows.Forms.Label();
+            this.clienteDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.clienteDataGridView);
             this.groupBox1.Controls.Add(this.listBoxSelecionar_Cliente);
             this.groupBox1.Location = new System.Drawing.Point(7, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(198, 587);
+            this.groupBox1.Size = new System.Drawing.Size(656, 587);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Selecione um Cliente";
@@ -54,7 +73,7 @@
             this.listBoxSelecionar_Cliente.FormattingEnabled = true;
             this.listBoxSelecionar_Cliente.Location = new System.Drawing.Point(0, 23);
             this.listBoxSelecionar_Cliente.Name = "listBoxSelecionar_Cliente";
-            this.listBoxSelecionar_Cliente.Size = new System.Drawing.Size(197, 563);
+            this.listBoxSelecionar_Cliente.Size = new System.Drawing.Size(182, 563);
             this.listBoxSelecionar_Cliente.TabIndex = 0;
             // 
             // groupBox2
@@ -68,6 +87,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Carro na Oficina";
             // 
+            // buttonOficina_adicionar
+            // 
+            this.buttonOficina_adicionar.Location = new System.Drawing.Point(6, 393);
+            this.buttonOficina_adicionar.Name = "buttonOficina_adicionar";
+            this.buttonOficina_adicionar.Size = new System.Drawing.Size(239, 23);
+            this.buttonOficina_adicionar.TabIndex = 1;
+            this.buttonOficina_adicionar.Text = "Adicionar Carro";
+            this.buttonOficina_adicionar.UseVisualStyleBackColor = true;
+            // 
             // listBoxCarro_Oficina
             // 
             this.listBoxCarro_Oficina.FormattingEnabled = true;
@@ -76,47 +104,185 @@
             this.listBoxCarro_Oficina.Size = new System.Drawing.Size(245, 368);
             this.listBoxCarro_Oficina.TabIndex = 0;
             // 
-            // buttonOficina_adicionar
-            // 
-            this.buttonOficina_adicionar.Location = new System.Drawing.Point(6, 393);
-            this.buttonOficina_adicionar.Name = "buttonOficina_adicionar";
-            this.buttonOficina_adicionar.Size = new System.Drawing.Size(239, 23);
-            this.buttonOficina_adicionar.TabIndex = 1;
-            this.buttonOficina_adicionar.Text = "Adicionar";
-            this.buttonOficina_adicionar.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(0, 0);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.buttonServicos_Criar);
+            this.groupBox3.Controls.Add(this.comboBoxServicos);
+            this.groupBox3.Controls.Add(this.listBoxServicos);
             this.groupBox3.Location = new System.Drawing.Point(459, 170);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(231, 408);
+            this.groupBox3.Size = new System.Drawing.Size(231, 422);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Serviços";
+            // 
+            // buttonServicos_Criar
+            // 
+            this.buttonServicos_Criar.Location = new System.Drawing.Point(0, 394);
+            this.buttonServicos_Criar.Name = "buttonServicos_Criar";
+            this.buttonServicos_Criar.Size = new System.Drawing.Size(225, 23);
+            this.buttonServicos_Criar.TabIndex = 4;
+            this.buttonServicos_Criar.Text = "Criar Serviço";
+            this.buttonServicos_Criar.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxServicos
+            // 
+            this.comboBoxServicos.FormattingEnabled = true;
+            this.comboBoxServicos.Location = new System.Drawing.Point(6, 366);
+            this.comboBoxServicos.Name = "comboBoxServicos";
+            this.comboBoxServicos.Size = new System.Drawing.Size(219, 21);
+            this.comboBoxServicos.TabIndex = 1;
+            // 
+            // listBoxServicos
+            // 
+            this.listBoxServicos.FormattingEnabled = true;
+            this.listBoxServicos.Location = new System.Drawing.Point(6, 19);
+            this.listBoxServicos.Name = "listBoxServicos";
+            this.listBoxServicos.Size = new System.Drawing.Size(219, 342);
+            this.listBoxServicos.TabIndex = 0;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.textBoxParecelas_Valor);
+            this.groupBox4.Controls.Add(this.label2);
+            this.groupBox4.Controls.Add(this.textBoxParecelas_Descricao);
+            this.groupBox4.Controls.Add(this.label1);
+            this.groupBox4.Controls.Add(this.listBoxParecelas);
+            this.groupBox4.Location = new System.Drawing.Point(696, 170);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(286, 422);
+            this.groupBox4.TabIndex = 4;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Parecelas";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 393);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(275, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Criar Parecelas";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBoxParecelas_Valor
+            // 
+            this.textBoxParecelas_Valor.Location = new System.Drawing.Point(90, 359);
+            this.textBoxParecelas_Valor.Name = "textBoxParecelas_Valor";
+            this.textBoxParecelas_Valor.Size = new System.Drawing.Size(185, 20);
+            this.textBoxParecelas_Valor.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(18, 359);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Valor:";
+            // 
+            // textBoxParecelas_Descricao
+            // 
+            this.textBoxParecelas_Descricao.Location = new System.Drawing.Point(90, 324);
+            this.textBoxParecelas_Descricao.Name = "textBoxParecelas_Descricao";
+            this.textBoxParecelas_Descricao.Size = new System.Drawing.Size(185, 20);
+            this.textBoxParecelas_Descricao.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 327);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Descrição:";
+            // 
+            // listBoxParecelas
+            // 
+            this.listBoxParecelas.FormattingEnabled = true;
+            this.listBoxParecelas.Location = new System.Drawing.Point(6, 19);
+            this.listBoxParecelas.Name = "listBoxParecelas";
+            this.listBoxParecelas.Size = new System.Drawing.Size(269, 303);
+            this.listBoxParecelas.TabIndex = 0;
+            // 
+            // label_nomeCliente
+            // 
+            this.label_nomeCliente.AutoSize = true;
+            this.label_nomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_nomeCliente.Location = new System.Drawing.Point(226, 29);
+            this.label_nomeCliente.Name = "label_nomeCliente";
+            this.label_nomeCliente.Size = new System.Drawing.Size(373, 37);
+            this.label_nomeCliente.TabIndex = 5;
+            this.label_nomeCliente.Text = "Sem Cliente Selecionado";
+            // 
+            // label_NifCliente
+            // 
+            this.label_NifCliente.AutoSize = true;
+            this.label_NifCliente.Location = new System.Drawing.Point(230, 89);
+            this.label_NifCliente.Name = "label_NifCliente";
+            this.label_NifCliente.Size = new System.Drawing.Size(10, 13);
+            this.label_NifCliente.TabIndex = 6;
+            this.label_NifCliente.Text = "-";
+            // 
+            // label_TelefoneCliente
+            // 
+            this.label_TelefoneCliente.AutoSize = true;
+            this.label_TelefoneCliente.Location = new System.Drawing.Point(230, 123);
+            this.label_TelefoneCliente.Name = "label_TelefoneCliente";
+            this.label_TelefoneCliente.Size = new System.Drawing.Size(10, 13);
+            this.label_TelefoneCliente.TabIndex = 7;
+            this.label_TelefoneCliente.Text = "-";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(782, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 24);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Valor Total:";
+            // 
+            // label_ValorTotalCliente
+            // 
+            this.label_ValorTotalCliente.AutoSize = true;
+            this.label_ValorTotalCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_ValorTotalCliente.Location = new System.Drawing.Point(822, 89);
+            this.label_ValorTotalCliente.Name = "label_ValorTotalCliente";
+            this.label_ValorTotalCliente.Size = new System.Drawing.Size(65, 24);
+            this.label_ValorTotalCliente.TabIndex = 9;
+            this.label_ValorTotalCliente.Text = "00.00€";
+            // 
+            // clienteDataGridView
+            // 
+            this.clienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.clienteDataGridView.Location = new System.Drawing.Point(239, 23);
+            this.clienteDataGridView.Name = "clienteDataGridView";
+            this.clienteDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.clienteDataGridView.TabIndex = 2;
             // 
             // MenuOficina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 599);
+            this.Controls.Add(this.label_ValorTotalCliente);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label_TelefoneCliente);
+            this.Controls.Add(this.label_NifCliente);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label_nomeCliente);
             this.Name = "MenuOficina";
             this.Text = "MenuOficina";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,7 +295,22 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListBox listBoxCarro_Oficina;
         private System.Windows.Forms.Button buttonOficina_adicionar;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button buttonServicos_Criar;
+        private System.Windows.Forms.ComboBox comboBoxServicos;
+        private System.Windows.Forms.ListBox listBoxServicos;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBoxParecelas_Valor;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxParecelas_Descricao;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox listBoxParecelas;
+        private System.Windows.Forms.Label label_nomeCliente;
+        private System.Windows.Forms.Label label_NifCliente;
+        private System.Windows.Forms.Label label_TelefoneCliente;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label_ValorTotalCliente;
+        private System.Windows.Forms.DataGridView clienteDataGridView;
     }
 }
