@@ -71,8 +71,12 @@
     <Compile Include="CarroVenda.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Classes\ExtendCliente.cs">
+      <CustomToolNamespace>Client</CustomToolNamespace>
+    </Compile>
     <Compile Include="Cliente.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+      <CustomToolNamespace>Client</CustomToolNamespace>
     </Compile>
     <Compile Include="MenuCliente.cs">
       <SubType>Form</SubType>

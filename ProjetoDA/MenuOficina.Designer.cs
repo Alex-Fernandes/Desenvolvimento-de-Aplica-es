@@ -49,21 +49,23 @@
             this.label_TelefoneCliente = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label_ValorTotalCliente = new System.Windows.Forms.Label();
-            this.clienteDataGridView = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label_MoradaCliente = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.clienteDataGridView);
             this.groupBox1.Controls.Add(this.listBoxSelecionar_Cliente);
             this.groupBox1.Location = new System.Drawing.Point(7, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(656, 587);
+            this.groupBox1.Size = new System.Drawing.Size(185, 587);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Selecione um Cliente";
@@ -75,6 +77,7 @@
             this.listBoxSelecionar_Cliente.Name = "listBoxSelecionar_Cliente";
             this.listBoxSelecionar_Cliente.Size = new System.Drawing.Size(182, 563);
             this.listBoxSelecionar_Cliente.TabIndex = 0;
+            this.listBoxSelecionar_Cliente.SelectedIndexChanged += new System.EventHandler(this.listBoxSelecionar_Cliente_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -208,28 +211,30 @@
             // label_nomeCliente
             // 
             this.label_nomeCliente.AutoSize = true;
-            this.label_nomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_nomeCliente.Location = new System.Drawing.Point(226, 29);
+            this.label_nomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.label_nomeCliente.Location = new System.Drawing.Point(324, 29);
             this.label_nomeCliente.Name = "label_nomeCliente";
-            this.label_nomeCliente.Size = new System.Drawing.Size(373, 37);
+            this.label_nomeCliente.Size = new System.Drawing.Size(347, 36);
             this.label_nomeCliente.TabIndex = 5;
             this.label_nomeCliente.Text = "Sem Cliente Selecionado";
             // 
             // label_NifCliente
             // 
             this.label_NifCliente.AutoSize = true;
-            this.label_NifCliente.Location = new System.Drawing.Point(230, 89);
+            this.label_NifCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_NifCliente.Location = new System.Drawing.Point(274, 84);
             this.label_NifCliente.Name = "label_NifCliente";
-            this.label_NifCliente.Size = new System.Drawing.Size(10, 13);
+            this.label_NifCliente.Size = new System.Drawing.Size(14, 20);
             this.label_NifCliente.TabIndex = 6;
             this.label_NifCliente.Text = "-";
             // 
             // label_TelefoneCliente
             // 
             this.label_TelefoneCliente.AutoSize = true;
-            this.label_TelefoneCliente.Location = new System.Drawing.Point(230, 123);
+            this.label_TelefoneCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_TelefoneCliente.Location = new System.Drawing.Point(314, 119);
             this.label_TelefoneCliente.Name = "label_TelefoneCliente";
-            this.label_TelefoneCliente.Size = new System.Drawing.Size(10, 13);
+            this.label_TelefoneCliente.Size = new System.Drawing.Size(14, 20);
             this.label_TelefoneCliente.TabIndex = 7;
             this.label_TelefoneCliente.Text = "-";
             // 
@@ -253,19 +258,66 @@
             this.label_ValorTotalCliente.TabIndex = 9;
             this.label_ValorTotalCliente.Text = "00.00€";
             // 
-            // clienteDataGridView
+            // label4
             // 
-            this.clienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.clienteDataGridView.Location = new System.Drawing.Point(239, 23);
-            this.clienteDataGridView.Name = "clienteDataGridView";
-            this.clienteDataGridView.Size = new System.Drawing.Size(300, 220);
-            this.clienteDataGridView.TabIndex = 2;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(227, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 33);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Nome:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(229, 84);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 20);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "NIF:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(229, 119);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 20);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Conctato:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(421, 84);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 20);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Morada:";
+            // 
+            // label_MoradaCliente
+            // 
+            this.label_MoradaCliente.AutoSize = true;
+            this.label_MoradaCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_MoradaCliente.Location = new System.Drawing.Point(494, 84);
+            this.label_MoradaCliente.Name = "label_MoradaCliente";
+            this.label_MoradaCliente.Size = new System.Drawing.Size(14, 20);
+            this.label_MoradaCliente.TabIndex = 14;
+            this.label_MoradaCliente.Text = "-";
             // 
             // MenuOficina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 599);
+            this.Controls.Add(this.label_MoradaCliente);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label_ValorTotalCliente);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label_TelefoneCliente);
@@ -282,7 +334,6 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,6 +362,10 @@
         private System.Windows.Forms.Label label_TelefoneCliente;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label_ValorTotalCliente;
-        private System.Windows.Forms.DataGridView clienteDataGridView;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label_MoradaCliente;
     }
 }

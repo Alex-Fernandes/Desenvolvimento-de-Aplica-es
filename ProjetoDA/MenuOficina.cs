@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
 
+
 namespace ProjetoDA
 {
     public partial class MenuOficina : Form
@@ -27,25 +28,17 @@ namespace ProjetoDA
 
         private void LerDados_Select_Cilente()
         {
-            ModelStand = new Model1Container();
-
-             (
-                from Cliente in ModelStand.Clientes
-                orderby Cliente.Nome
-                select Cliente
-             ).Load();
-
-            /*
-            List<string> _names = (from p in context.RakHolders select p.Name)
-    .ToList()
-    .Select(name => name.Split(','))
-    .Select(nameSplitted => string.Format("{0},{1}", nameSplitted[0].Trim(), nameSplitted[1].Trim()))
-    .ToList();*/
-
-            //listBoxSelecionar_Cliente.DataSource = ModelStand.Clientes.Local.ToBindingList();
             listBoxSelecionar_Cliente.DataSource = ModelStand.Clientes.ToList<Cliente>();
-            clienteDataGridView.DataSource = ModelStand.Clientes.ToList<Cliente>();
         }
 
+        private void listBoxSelecionar_Cliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Cliente cliente = listBoxSelecionar_Cliente.SelectedItem as Cliente;
+
+            label_nomeCliente.Text = cliente.Nome;
+            label_NifCliente.Text = cliente.NIF;
+            label_TelefoneCliente.Text = cliente.Contacto;
+            label_MoradaCliente.Text = cliente.Morada;
+        }
     }
 }
