@@ -286,8 +286,8 @@
           <EntitySet Name="Parcelas" EntityType="Model1.Parcela" />
           <EntitySet Name="Servicos" EntityType="Model1.Servico" />
           <AssociationSet Name="ClienteVenda" Association="Model1.ClienteVenda">
-            <End Role="Cliente" EntitySet="Clientes" />
-            <End Role="Venda" EntitySet="Vendas" />
+            <End EntitySet="Clientes" Role="Cliente" />
+            <End EntitySet="Vendas" Role="Venda" />
           </AssociationSet>
           <AssociationSet Name="ClienteAluguer" Association="Model1.ClienteAluguer">
             <End Role="Cliente" EntitySet="Clientes" />
@@ -336,9 +336,9 @@
           <Property Name="Estado" Type="String" Nullable="false" />
           <Property Name="Data" Type="String" Nullable="false" />
           <Property Name="ClienteIdCliente" Type="String" Nullable="false" />
-          <Property Name="ClienteIdCliente1" Type="Int32" Nullable="false" />
+          <Property Name="ClienteIdCliente1" Nullable="false" Type="Int32" />
           <NavigationProperty Name="Cliente" Relationship="Model1.ClienteVenda" FromRole="Venda" ToRole="Cliente" />
-          <Property Name="ClienteIdCliente2" Type="Int32" Nullable="false" />
+          <Property Name="ClienteIdCliente2" Nullable="false" Type="Int32" />
           <NavigationProperty Name="CarroVenda" Relationship="Model1.VendaCarroVenda" FromRole="Venda" ToRole="CarroVenda" />
         </EntityType>
         <EntityType Name="Carro">
@@ -362,7 +362,7 @@
           <Property Name="Kms" Type="String" Nullable="false" />
           <Property Name="ClienteIdCliente" Type="String" Nullable="false" />
           <NavigationProperty Name="Cliente" Relationship="Model1.ClienteAluguer" FromRole="Aluguer" ToRole="Cliente" />
-          <Property Name="ClienteIdCliente1" Type="Int32" Nullable="false" />
+          <Property Name="ClienteIdCliente1" Nullable="false" Type="Int32" />
           <NavigationProperty Name="CarroAluguer" Relationship="Model1.AluguerCarroAluguer" FromRole="Aluguer" ToRole="CarroAluguer" />
         </EntityType>
         <EntityType Name="Parcela">
@@ -401,12 +401,12 @@
           <Property Name="Kms" Type="String" Nullable="false" />
           <Property Name="ClienteIdCliente" Type="String" Nullable="false" />
           <NavigationProperty Name="Cliente" Relationship="Model1.ClienteCarroOficina" FromRole="CarroOficina" ToRole="Cliente" />
-          <Property Name="ClienteIdCliente1" Type="Int32" Nullable="false" />
+          <Property Name="ClienteIdCliente1" Nullable="false" Type="Int32" />
           <NavigationProperty Name="Servicos" Relationship="Model1.ServicoCarroOficina" FromRole="CarroOficina" ToRole="Servico" />
         </EntityType>
         <Association Name="ClienteVenda">
-          <End Type="Model1.Cliente" Role="Cliente" Multiplicity="1" />
-          <End Type="Model1.Venda" Role="Venda" Multiplicity="*" />
+          <End Type="Model1.Cliente" Multiplicity="1" Role="Cliente" />
+          <End Type="Model1.Venda" Multiplicity="*" Role="Venda" />
           <ReferentialConstraint>
             <Principal Role="Cliente">
               <PropertyRef Name="IdCliente" />

@@ -222,7 +222,7 @@
             // 
             this.label_NifCliente.AutoSize = true;
             this.label_NifCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_NifCliente.Location = new System.Drawing.Point(274, 84);
+            this.label_NifCliente.Location = new System.Drawing.Point(264, 84);
             this.label_NifCliente.Name = "label_NifCliente";
             this.label_NifCliente.Size = new System.Drawing.Size(14, 20);
             this.label_NifCliente.TabIndex = 6;
@@ -232,7 +232,7 @@
             // 
             this.label_TelefoneCliente.AutoSize = true;
             this.label_TelefoneCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_TelefoneCliente.Location = new System.Drawing.Point(314, 119);
+            this.label_TelefoneCliente.Location = new System.Drawing.Point(303, 119);
             this.label_TelefoneCliente.Name = "label_TelefoneCliente";
             this.label_TelefoneCliente.Size = new System.Drawing.Size(14, 20);
             this.label_TelefoneCliente.TabIndex = 7;
@@ -302,7 +302,7 @@
             // 
             this.label_MoradaCliente.AutoSize = true;
             this.label_MoradaCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_MoradaCliente.Location = new System.Drawing.Point(494, 84);
+            this.label_MoradaCliente.Location = new System.Drawing.Point(484, 84);
             this.label_MoradaCliente.Name = "label_MoradaCliente";
             this.label_MoradaCliente.Size = new System.Drawing.Size(14, 20);
             this.label_MoradaCliente.TabIndex = 14;
