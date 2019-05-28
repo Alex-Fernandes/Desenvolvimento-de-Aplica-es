@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace ProjetoDA
 {
-    public partial class Cliente
+    public partial class Carro
     {
-        public override string ToString() 
+        public override string ToString()
         {
-            return "Nome: " + Nome + " - NIF: " + NIF;
+            return  Marca + " - " + Modelo + " - " + NumeroChassis + " - Conbustivel: " + Combustivel;
         }
-    
     }
 }

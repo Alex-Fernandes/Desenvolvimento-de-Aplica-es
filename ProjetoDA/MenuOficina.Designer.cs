@@ -98,6 +98,7 @@
             this.buttonOficina_adicionar.TabIndex = 1;
             this.buttonOficina_adicionar.Text = "Adicionar Carro";
             this.buttonOficina_adicionar.UseVisualStyleBackColor = true;
+            this.buttonOficina_adicionar.Click += new System.EventHandler(this.buttonOficina_adicionar_Click);
             // 
             // listBoxCarro_Oficina
             // 

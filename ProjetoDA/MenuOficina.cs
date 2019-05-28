@@ -23,12 +23,18 @@ namespace ProjetoDA
             InitializeComponent();
             ModelStand = new Model1Container();
             LerDados_Select_Cilente();
+            LerDados_Select_Carros();
 
         }
 
         private void LerDados_Select_Cilente()
         {
             listBoxSelecionar_Cliente.DataSource = ModelStand.Clientes.ToList<Cliente>();
+        }
+
+        private void LerDados_Select_Carros()
+        {
+            listBoxCarro_Oficina.DataSource = ModelStand.Carros.ToList<Carro>();
         }
 
         private void listBoxSelecionar_Cliente_SelectedIndexChanged(object sender, EventArgs e)
@@ -39,6 +45,12 @@ namespace ProjetoDA
             label_NifCliente.Text = cliente.NIF;
             label_TelefoneCliente.Text = cliente.Contacto;
             label_MoradaCliente.Text = cliente.Morada;
+        }
+
+        private void buttonOficina_adicionar_Click(object sender, EventArgs e)
+        {
+            AdicionarCarro adicionarCarro = new AdicionarCarro();
+            adicionarCarro.Show();
         }
     }
 }

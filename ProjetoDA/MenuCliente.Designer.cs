@@ -47,7 +47,12 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.clienteBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.clienteBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clienteDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contactoTextBox = new System.Windows.Forms.TextBox();
             this.moradaTextBox = new System.Windows.Forms.TextBox();
             this.nIFTextBox = new System.Windows.Forms.TextBox();
@@ -55,26 +60,23 @@
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.textBoxFiltrar = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             contactoLabel = new System.Windows.Forms.Label();
             moradaLabel = new System.Windows.Forms.Label();
             nIFLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingNavigator)).BeginInit();
             this.clienteBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // contactoLabel
             // 
             contactoLabel.AutoSize = true;
-            contactoLabel.Location = new System.Drawing.Point(17, 118);
+            contactoLabel.Location = new System.Drawing.Point(70, 188);
             contactoLabel.Name = "contactoLabel";
             contactoLabel.Size = new System.Drawing.Size(53, 13);
             contactoLabel.TabIndex = 2;
@@ -83,7 +85,7 @@
             // moradaLabel
             // 
             moradaLabel.AutoSize = true;
-            moradaLabel.Location = new System.Drawing.Point(16, 90);
+            moradaLabel.Location = new System.Drawing.Point(69, 160);
             moradaLabel.Name = "moradaLabel";
             moradaLabel.Size = new System.Drawing.Size(46, 13);
             moradaLabel.TabIndex = 6;
@@ -92,7 +94,7 @@
             // nIFLabel
             // 
             nIFLabel.AutoSize = true;
-            nIFLabel.Location = new System.Drawing.Point(17, 60);
+            nIFLabel.Location = new System.Drawing.Point(70, 130);
             nIFLabel.Name = "nIFLabel";
             nIFLabel.Size = new System.Drawing.Size(27, 13);
             nIFLabel.TabIndex = 8;
@@ -101,7 +103,7 @@
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(17, 34);
+            nomeLabel.Location = new System.Drawing.Point(70, 104);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(38, 13);
             nomeLabel.TabIndex = 10;
@@ -221,7 +223,7 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.clienteBindingNavigatorSaveItem});
-            this.clienteBindingNavigator.Location = new System.Drawing.Point(335, 9);
+            this.clienteBindingNavigator.Location = new System.Drawing.Point(3, 31);
             this.clienteBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.clienteBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.clienteBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -231,6 +233,10 @@
             this.clienteBindingNavigator.Size = new System.Drawing.Size(278, 25);
             this.clienteBindingNavigator.TabIndex = 0;
             this.clienteBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataSource = typeof(ProjetoDA.Cliente);
             // 
             // clienteDataGridView
             // 
@@ -242,80 +248,10 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.clienteDataGridView.DataSource = this.clienteBindingSource;
-            this.clienteDataGridView.Location = new System.Drawing.Point(13, 57);
+            this.clienteDataGridView.Location = new System.Drawing.Point(12, 76);
             this.clienteDataGridView.Name = "clienteDataGridView";
-            this.clienteDataGridView.Size = new System.Drawing.Size(442, 220);
+            this.clienteDataGridView.Size = new System.Drawing.Size(442, 204);
             this.clienteDataGridView.TabIndex = 1;
-            // 
-            // contactoTextBox
-            // 
-            this.contactoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Contacto", true));
-            this.contactoTextBox.Location = new System.Drawing.Point(77, 115);
-            this.contactoTextBox.Name = "contactoTextBox";
-            this.contactoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.contactoTextBox.TabIndex = 3;
-            // 
-            // moradaTextBox
-            // 
-            this.moradaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Morada", true));
-            this.moradaTextBox.Location = new System.Drawing.Point(76, 87);
-            this.moradaTextBox.Name = "moradaTextBox";
-            this.moradaTextBox.Size = new System.Drawing.Size(100, 20);
-            this.moradaTextBox.TabIndex = 7;
-            // 
-            // nIFTextBox
-            // 
-            this.nIFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "NIF", true));
-            this.nIFTextBox.Location = new System.Drawing.Point(77, 57);
-            this.nIFTextBox.Name = "nIFTextBox";
-            this.nIFTextBox.Size = new System.Drawing.Size(100, 20);
-            this.nIFTextBox.TabIndex = 9;
-            // 
-            // nomeTextBox
-            // 
-            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(77, 31);
-            this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(100, 20);
-            this.nomeTextBox.TabIndex = 11;
-            // 
-            // btnFiltrar
-            // 
-            this.btnFiltrar.Location = new System.Drawing.Point(237, 9);
-            this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
-            this.btnFiltrar.TabIndex = 12;
-            this.btnFiltrar.Text = "Filtrar";
-            this.btnFiltrar.UseVisualStyleBackColor = true;
-            // 
-            // textBoxFiltrar
-            // 
-            this.textBoxFiltrar.Location = new System.Drawing.Point(13, 9);
-            this.textBoxFiltrar.Multiline = true;
-            this.textBoxFiltrar.Name = "textBoxFiltrar";
-            this.textBoxFiltrar.Size = new System.Drawing.Size(218, 23);
-            this.textBoxFiltrar.TabIndex = 13;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.nIFTextBox);
-            this.groupBox1.Controls.Add(this.nomeTextBox);
-            this.groupBox1.Controls.Add(nomeLabel);
-            this.groupBox1.Controls.Add(contactoLabel);
-            this.groupBox1.Controls.Add(nIFLabel);
-            this.groupBox1.Controls.Add(moradaLabel);
-            this.groupBox1.Controls.Add(this.contactoTextBox);
-            this.groupBox1.Controls.Add(this.moradaTextBox);
-            this.groupBox1.Location = new System.Drawing.Point(503, 72);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 163);
-            this.groupBox1.TabIndex = 14;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Criar Cliente";
-            // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataSource = typeof(ProjetoDA.Cliente);
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -341,27 +277,105 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Contacto";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
+            // contactoTextBox
+            // 
+            this.contactoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Contacto", true));
+            this.contactoTextBox.Location = new System.Drawing.Point(130, 185);
+            this.contactoTextBox.Name = "contactoTextBox";
+            this.contactoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.contactoTextBox.TabIndex = 3;
+            // 
+            // moradaTextBox
+            // 
+            this.moradaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Morada", true));
+            this.moradaTextBox.Location = new System.Drawing.Point(129, 157);
+            this.moradaTextBox.Name = "moradaTextBox";
+            this.moradaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.moradaTextBox.TabIndex = 7;
+            // 
+            // nIFTextBox
+            // 
+            this.nIFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "NIF", true));
+            this.nIFTextBox.Location = new System.Drawing.Point(130, 127);
+            this.nIFTextBox.Name = "nIFTextBox";
+            this.nIFTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nIFTextBox.TabIndex = 9;
+            // 
+            // nomeTextBox
+            // 
+            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Nome", true));
+            this.nomeTextBox.Location = new System.Drawing.Point(130, 101);
+            this.nomeTextBox.Name = "nomeTextBox";
+            this.nomeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nomeTextBox.TabIndex = 11;
+            // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Location = new System.Drawing.Point(248, 30);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
+            this.btnFiltrar.TabIndex = 12;
+            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click_1);
+            // 
+            // textBoxFiltrar
+            // 
+            this.textBoxFiltrar.Location = new System.Drawing.Point(12, 31);
+            this.textBoxFiltrar.Multiline = true;
+            this.textBoxFiltrar.Name = "textBoxFiltrar";
+            this.textBoxFiltrar.Size = new System.Drawing.Size(218, 23);
+            this.textBoxFiltrar.TabIndex = 13;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.nIFTextBox);
+            this.groupBox1.Controls.Add(this.nomeTextBox);
+            this.groupBox1.Controls.Add(nomeLabel);
+            this.groupBox1.Controls.Add(contactoLabel);
+            this.groupBox1.Controls.Add(this.clienteBindingNavigator);
+            this.groupBox1.Controls.Add(nIFLabel);
+            this.groupBox1.Controls.Add(moradaLabel);
+            this.groupBox1.Controls.Add(this.contactoTextBox);
+            this.groupBox1.Controls.Add(this.moradaTextBox);
+            this.groupBox1.Location = new System.Drawing.Point(479, 9);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(308, 289);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Criar Cliente";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textBoxFiltrar);
+            this.groupBox2.Controls.Add(this.btnFiltrar);
+            this.groupBox2.Controls.Add(this.clienteDataGridView);
+            this.groupBox2.Location = new System.Drawing.Point(13, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(460, 286);
+            this.groupBox2.TabIndex = 15;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
             // MenuCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 310);
+            this.ClientSize = new System.Drawing.Size(797, 310);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBoxFiltrar);
-            this.Controls.Add(this.btnFiltrar);
-            this.Controls.Add(this.clienteDataGridView);
-            this.Controls.Add(this.clienteBindingNavigator);
             this.Name = "MenuCliente";
             this.Text = "MenuCliente";
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingNavigator)).EndInit();
             this.clienteBindingNavigator.ResumeLayout(false);
             this.clienteBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -393,5 +407,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-    }
+		private System.Windows.Forms.GroupBox groupBox2;
+	}
 }

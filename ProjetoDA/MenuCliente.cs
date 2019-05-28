@@ -36,6 +36,13 @@ namespace ProjetoDA
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
+            /* Nao Remover 
+             * dá erro se nao estiver aqui por alguma razão 
+             */
+        }
+
+        private void btnFiltrar_Click_1(object sender, EventArgs e)
+        {
             if (textBoxFiltrar.Text.Length > 0)
             {
                 bindingNavigatorAddNewItem.Enabled = false;

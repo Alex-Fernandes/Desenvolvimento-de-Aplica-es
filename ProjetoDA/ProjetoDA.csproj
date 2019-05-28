@@ -77,12 +77,19 @@
     <Compile Include="CarroVenda.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Classes\ExtendCarro.cs" />
     <Compile Include="Classes\ExtendCliente.cs">
       <CustomToolNamespace>Client</CustomToolNamespace>
     </Compile>
     <Compile Include="Cliente.cs">
       <DependentUpon>Model1.tt</DependentUpon>
       <CustomToolNamespace>Client</CustomToolNamespace>
+    </Compile>
+    <Compile Include="MenuAluguer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAluguer.Designer.cs">
+      <DependentUpon>MenuAluguer.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuCliente.cs">
       <SubType>Form</SubType>
@@ -153,6 +160,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Carro.datasource" />
     <None Include="Properties\DataSources\Cliente.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

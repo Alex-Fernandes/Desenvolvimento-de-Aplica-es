@@ -60,3 +60,22 @@ C:\Users\Alex\Desktop\ProjetoDA\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug
 C:\Users\Alex\Desktop\ProjetoDA\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.exe
 C:\Users\Alex\Desktop\ProjetoDA\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.pdb
 C:\Users\Alex\Desktop\ProjetoDA\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.AdicionarCarro.resources
+C:\Users\Alex\Desktop\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\bin\Debug\ProjetoDA.exe.config
+C:\Users\Alex\Desktop\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\bin\Debug\ProjetoDA.exe
+C:\Users\Alex\Desktop\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\bin\Debug\ProjetoDA.pdb
+C:\Users\Alex\Desktop\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\bin\Debug\EntityFramework.dll
+C:\Users\Alex\Desktop\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Alex\Desktop\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\bin\Debug\EntityFramework.xml
+C:\Users\Alex\Desktop\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Alex\Desktop\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\obj\Debug\ProjetoDA.csprojAssemblyReference.cache
+C:\Users\Alex\Desktop\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\obj\Debug\ProjetoDA.AdicionarCarro.resources
+C:\Users\Alex\Desktop\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\obj\Debug\ProjetoDA.MenuCliente.resources
+C:\Users\Alex\Desktop\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\obj\Debug\ProjetoDA.MenuOficina.resources
+C:\Users\Alex\Desktop\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\obj\Debug\ProjetoDA.MenuOriginal.resources
+C:\Users\Alex\Desktop\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\obj\Debug\ProjetoDA.Properties.Resources.resources
+C:\Users\Alex\Desktop\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\obj\Debug\ProjetoDA.csproj.GenerateResource.cache
+C:\Users\Alex\Desktop\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\obj\Debug\ProjetoDA.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Desktop\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\obj\Debug\ProjetoDA.csproj.CopyComplete
+C:\Users\Alex\Desktop\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\obj\Debug\ProjetoDA.exe
+C:\Users\Alex\Desktop\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\obj\Debug\ProjetoDA.pdb
+C:\Outros\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.AdicionarCarro.resources
