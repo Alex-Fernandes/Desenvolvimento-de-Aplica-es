@@ -29,6 +29,7 @@ namespace ProjetoDA
             clienteBindingSource.DataSource = ModelStand.Clientes.Local.ToBindingList();
         }
 
+        //Guardar o cliente
         private void clienteBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             ModelStand.SaveChanges();
@@ -41,6 +42,7 @@ namespace ProjetoDA
              */
         }
 
+        //Pesquisa por nome
         private void btnFiltrar_Click_1(object sender, EventArgs e)
         {
             if (textBoxFiltrar.Text.Length > 0)

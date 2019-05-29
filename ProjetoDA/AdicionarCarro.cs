@@ -26,20 +26,27 @@ namespace ProjetoDA
 				select carro
 			).Load();
 
+        
+            //Mostar os carros
 			carroBindingSource.DataSource = ModelStand.Carros.Local.ToBindingList();
 		}
         
-		private void carroBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-		{
-			ModelStand.SaveChanges();
-		}
-
-
+        //Botao para guardar
         private void carroBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
         {
             ModelStand.SaveChanges();
         }
 
+
+        private void btnFiltrar_Click_1(object sender, EventArgs e)
+        {
+            /* Nao retirar 
+             * err0
+             */
+
+        }
+
+        //Pesquisar pelo numero de chassi pelos Carros
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
             if (textBoxFiltrar.Text.Length > 0)
@@ -73,6 +80,7 @@ namespace ProjetoDA
             }
         }
 
+        //Ghost texto se nao clicar ou se clicar noutro sitio aparece 
         private void textBoxFiltrar_Enter(object sender, EventArgs e)
         {
             if (textBoxFiltrar.Text == "Introduza o numero de Chassi")
@@ -81,6 +89,7 @@ namespace ProjetoDA
             }
         }
 
+        //Ghost texto ao clicar desaparece
         private void textBoxFiltrar_Leave(object sender, EventArgs e)
         {
             if (textBoxFiltrar.Text == "")
