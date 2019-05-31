@@ -85,6 +85,12 @@
       <DependentUpon>Model1.tt</DependentUpon>
       <CustomToolNamespace>Client</CustomToolNamespace>
     </Compile>
+    <Compile Include="CriarServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CriarServico.Designer.cs">
+      <DependentUpon>CriarServico.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuAluguer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </Compile>
     <EmbeddedResource Include="AdicionarCarro.resx">
       <DependentUpon>AdicionarCarro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CriarServico.resx">
+      <DependentUpon>CriarServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuCliente.resx">
       <DependentUpon>MenuCliente.cs</DependentUpon>

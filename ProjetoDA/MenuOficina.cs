@@ -105,5 +105,11 @@ namespace ProjetoDA
             textBoxParecelas_Descricao.Text = "";
             textBoxParecelas_Valor.Text = "";
         }
+
+        private void buttonServicos_Criar_Click(object sender, EventArgs e)
+        {
+            CriarServico criarServico = new CriarServico();
+            criarServico.Show();
+        }
     }
 }

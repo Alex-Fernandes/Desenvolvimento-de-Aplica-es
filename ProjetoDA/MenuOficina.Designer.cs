@@ -156,6 +156,7 @@
             this.buttonServicos_Criar.TabIndex = 4;
             this.buttonServicos_Criar.Text = "Criar Serviço";
             this.buttonServicos_Criar.UseVisualStyleBackColor = true;
+            this.buttonServicos_Criar.Click += new System.EventHandler(this.buttonServicos_Criar_Click);
             // 
             // comboBoxServicos
             // 
