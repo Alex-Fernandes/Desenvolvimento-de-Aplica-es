@@ -15,13 +15,13 @@ namespace ProjetoDA
 {
     public partial class MenuOficina : Form
     {
-        private Model1Container ModelStand;
+        private ModelOficinaContainer ModelStand;
 
         public MenuOficina()
         {
 
             InitializeComponent();
-            ModelStand = new Model1Container();
+            ModelStand = new ModelOficinaContainer();
             LerDados_Select_Cilente();
             LerDados_Select_Carros();
 
@@ -30,13 +30,13 @@ namespace ProjetoDA
         //Ir buscar data dos Clientes
         private void LerDados_Select_Cilente()
         {
-            listBoxSelecionar_Cliente.DataSource = ModelStand.Clientes.ToList<Cliente>();
+            listBoxSelecionar_Cliente.DataSource = ModelStand.Cliente.ToList<Cliente>();
         }
 
         //Ir buscar data dos Carros
         private void LerDados_Select_Carros()
         {
-            listBoxCarro_Oficina.DataSource = ModelStand.Carros.ToList<Carro>();
+            listBoxCarro_Oficina.DataSource = ModelStand.Carro.ToList<Carro>();
         }
 
         //Mostrar os dados do utilzador nas labels
@@ -63,25 +63,25 @@ namespace ProjetoDA
             if (textBoxClientePesquisar.Text.Length > 0)
             {
                 ModelStand.Dispose();
-                ModelStand = new Model1Container();
+                ModelStand = new ModelOficinaContainer();
 
-                (from cliente in ModelStand.Clientes
+                (from cliente in ModelStand.Cliente
                  where cliente.Nome.ToUpper().Contains(textBoxClientePesquisar.Text.ToUpper())
                  orderby cliente.Nome
                  select cliente).ToList();
 
-                listBoxSelecionar_Cliente.DataSource = ModelStand.Clientes.Local.ToBindingList();
+                listBoxSelecionar_Cliente.DataSource = ModelStand.Cliente.Local.ToBindingList();
             }
             else
             {
                 ModelStand.Dispose();
-                ModelStand = new Model1Container();
+                ModelStand = new ModelOficinaContainer();
 
-                (from cliente in ModelStand.Clientes
+                (from cliente in ModelStand.Cliente
                  orderby cliente.Nome
                  select cliente).Load();
 
-                listBoxSelecionar_Cliente.DataSource = ModelStand.Clientes.Local.ToBindingList();
+                listBoxSelecionar_Cliente.DataSource = ModelStand.Cliente.Local.ToBindingList();
             }
         }
 

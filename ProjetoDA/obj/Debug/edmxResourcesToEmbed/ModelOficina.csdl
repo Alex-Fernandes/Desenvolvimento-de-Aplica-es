@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ModelOficina" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="ModelOficinaContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cliente" EntityType="ModelOficina.Cliente" />
+    <EntitySet Name="Venda" EntityType="ModelOficina.Venda" />
+    <EntitySet Name="Aluguer" EntityType="ModelOficina.Aluguer" />
+    <EntitySet Name="Servicos" EntityType="ModelOficina.Servico" />
+    <EntitySet Name="Parcela" EntityType="ModelOficina.Parcela" />
+    <EntitySet Name="Carro" EntityType="ModelOficina.Carro" />
+    <AssociationSet Name="ClienteCarroOficina" Association="ModelOficina.ClienteCarroOficina">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="CarroOficina" EntitySet="Carro" />
+    </AssociationSet>
+    <AssociationSet Name="ClienteAluguer" Association="ModelOficina.ClienteAluguer">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Aluguer" EntitySet="Aluguer" />
+    </AssociationSet>
+    <AssociationSet Name="ClienteVenda" Association="ModelOficina.ClienteVenda">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Venda" EntitySet="Venda" />
+    </AssociationSet>
+    <AssociationSet Name="VendaCarroVenda" Association="ModelOficina.VendaCarroVenda">
+      <End Role="Venda" EntitySet="Venda" />
+      <End Role="CarroVenda" EntitySet="Carro" />
+    </AssociationSet>
+    <AssociationSet Name="AluguerCarroAluguer" Association="ModelOficina.AluguerCarroAluguer">
+      <End Role="Aluguer" EntitySet="Aluguer" />
+      <End Role="CarroAluguer" EntitySet="Carro" />
+    </AssociationSet>
+    <AssociationSet Name="CarroOficinaServico" Association="ModelOficina.CarroOficinaServico">
+      <End Role="CarroOficina" EntitySet="Carro" />
+      <End Role="Servico" EntitySet="Servicos" />
+    </AssociationSet>
+    <AssociationSet Name="ServicoParcela" Association="ModelOficina.ServicoParcela">
+      <End Role="Servico" EntitySet="Servicos" />
+      <End Role="Parcela" EntitySet="Parcela" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="IdCliente" />
+    </Key>
+    <Property Name="IdCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" Nullable="false" />
+    <Property Name="NIF" Type="String" Nullable="false" />
+    <Property Name="Morada" Type="String" Nullable="false" />
+    <Property Name="Contacto" Type="String" Nullable="false" />
+    <NavigationProperty Name="CarroOficinas" Relationship="ModelOficina.ClienteCarroOficina" FromRole="Cliente" ToRole="CarroOficina" />
+    <NavigationProperty Name="Aluguers" Relationship="ModelOficina.ClienteAluguer" FromRole="Cliente" ToRole="Aluguer" />
+    <NavigationProperty Name="Vendas" Relationship="ModelOficina.ClienteVenda" FromRole="Cliente" ToRole="Venda" />
+  </EntityType>
+  <EntityType Name="Venda">
+    <Key>
+      <PropertyRef Name="IdVendas" />
+    </Key>
+    <Property Name="IdVendas" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Valor" Type="String" Nullable="false" />
+    <Property Name="Estado" Type="String" Nullable="false" />
+    <Property Name="Data" Type="String" Nullable="false" />
+    <NavigationProperty Name="Cliente" Relationship="ModelOficina.ClienteVenda" FromRole="Venda" ToRole="Cliente" />
+    <Property Name="ClienteIdCliente" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CarroVenda" Relationship="ModelOficina.VendaCarroVenda" FromRole="Venda" ToRole="CarroVenda" />
+  </EntityType>
+  <EntityType Name="Aluguer">
+    <Key>
+      <PropertyRef Name="IdAluguer" />
+    </Key>
+    <Property Name="IdAluguer" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DataInicio" Type="String" Nullable="false" />
+    <Property Name="DataFim" Type="String" Nullable="false" />
+    <Property Name="Valor" Type="String" Nullable="false" />
+    <Property Name="Kms" Type="String" Nullable="false" />
+    <NavigationProperty Name="Cliente" Relationship="ModelOficina.ClienteAluguer" FromRole="Aluguer" ToRole="Cliente" />
+    <Property Name="ClienteIdCliente" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CarroAluguer" Relationship="ModelOficina.AluguerCarroAluguer" FromRole="Aluguer" ToRole="CarroAluguer" />
+  </EntityType>
+  <EntityType Name="CarroOficina" BaseType="ModelOficina.Carro">
+    <Property Name="Matricula" Type="String" Nullable="false" />
+    <Property Name="Kms" Type="String" Nullable="false" />
+    <NavigationProperty Name="Cliente" Relationship="ModelOficina.ClienteCarroOficina" FromRole="CarroOficina" ToRole="Cliente" />
+    <Property Name="ClienteIdCliente" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Servicoes" Relationship="ModelOficina.CarroOficinaServico" FromRole="CarroOficina" ToRole="Servico" />
+  </EntityType>
+  <EntityType Name="Servico">
+    <Key>
+      <PropertyRef Name="IdServico" />
+    </Key>
+    <Property Name="IdServico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DataEntrada" Type="String" Nullable="false" />
+    <Property Name="Tipo" Type="String" Nullable="false" />
+    <Property Name="DataSaida" Type="String" Nullable="false" />
+    <NavigationProperty Name="CarroOficina" Relationship="ModelOficina.CarroOficinaServico" FromRole="Servico" ToRole="CarroOficina" />
+    <Property Name="CarroOficinaIdCarro" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Parcelas" Relationship="ModelOficina.ServicoParcela" FromRole="Servico" ToRole="Parcela" />
+  </EntityType>
+  <EntityType Name="Parcela">
+    <Key>
+      <PropertyRef Name="IdParcela" />
+    </Key>
+    <Property Name="IdParcela" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Valor" Type="String" Nullable="false" />
+    <Property Name="Descricao" Type="String" Nullable="false" />
+    <NavigationProperty Name="Servico" Relationship="ModelOficina.ServicoParcela" FromRole="Parcela" ToRole="Servico" />
+    <Property Name="ServicoIdServico" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CarroVenda" BaseType="ModelOficina.Carro">
+    <Property Name="Extras" Type="String" Nullable="false" />
+    <NavigationProperty Name="Venda" Relationship="ModelOficina.VendaCarroVenda" FromRole="CarroVenda" ToRole="Venda" />
+  </EntityType>
+  <EntityType Name="Carro">
+    <Key>
+      <PropertyRef Name="IdCarro" />
+    </Key>
+    <Property Name="IdCarro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NumeroChassis" Type="String" Nullable="false" />
+    <Property Name="Marca" Type="String" Nullable="false" />
+    <Property Name="Modelo" Type="String" Nullable="false" />
+    <Property Name="Combustivel" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CarroAluguer" BaseType="ModelOficina.Carro">
+    <Property Name="Estado" Type="String" Nullable="false" />
+    <Property Name="Matricula" Type="String" Nullable="false" />
+    <NavigationProperty Name="Aluguers" Relationship="ModelOficina.AluguerCarroAluguer" FromRole="CarroAluguer" ToRole="Aluguer" />
+  </EntityType>
+  <Association Name="ClienteCarroOficina">
+    <End Type="ModelOficina.Cliente" Role="Cliente" Multiplicity="1" />
+    <End Type="ModelOficina.CarroOficina" Role="CarroOficina" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="CarroOficina">
+        <PropertyRef Name="ClienteIdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClienteAluguer">
+    <End Type="ModelOficina.Cliente" Role="Cliente" Multiplicity="1" />
+    <End Type="ModelOficina.Aluguer" Role="Aluguer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="Aluguer">
+        <PropertyRef Name="ClienteIdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClienteVenda">
+    <End Type="ModelOficina.Cliente" Role="Cliente" Multiplicity="1" />
+    <End Type="ModelOficina.Venda" Role="Venda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="Venda">
+        <PropertyRef Name="ClienteIdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VendaCarroVenda">
+    <End Type="ModelOficina.Venda" Role="Venda" Multiplicity="1" />
+    <End Type="ModelOficina.CarroVenda" Role="CarroVenda" Multiplicity="1" />
+  </Association>
+  <Association Name="AluguerCarroAluguer">
+    <End Type="ModelOficina.Aluguer" Role="Aluguer" Multiplicity="*" />
+    <End Type="ModelOficina.CarroAluguer" Role="CarroAluguer" Multiplicity="1" />
+  </Association>
+  <Association Name="CarroOficinaServico">
+    <End Type="ModelOficina.CarroOficina" Role="CarroOficina" Multiplicity="1" />
+    <End Type="ModelOficina.Servico" Role="Servico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CarroOficina">
+        <PropertyRef Name="IdCarro" />
+      </Principal>
+      <Dependent Role="Servico">
+        <PropertyRef Name="CarroOficinaIdCarro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ServicoParcela">
+    <End Type="ModelOficina.Servico" Role="Servico" Multiplicity="1" />
+    <End Type="ModelOficina.Parcela" Role="Parcela" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servico">
+        <PropertyRef Name="IdServico" />
+      </Principal>
+      <Dependent Role="Parcela">
+        <PropertyRef Name="ServicoIdServico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

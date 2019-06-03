@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace ProjetoDA
 {
-	public partial class MenuAluguer : Form
+	public partial class MenuOriginalv2 : Form
 	{
-		public MenuAluguer()
+		public MenuOriginalv2()
 		{
 			InitializeComponent();
 		}
-	}
+
+        private void btnMenuCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
 }

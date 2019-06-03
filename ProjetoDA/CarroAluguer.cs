@@ -17,13 +17,13 @@ namespace ProjetoDA
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CarroAluguer()
         {
-            this.Aluguer = new HashSet<Aluguer>();
+            this.Aluguers = new HashSet<Aluguer>();
         }
     
         public string Estado { get; set; }
         public string Matricula { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Aluguer> Aluguer { get; set; }
+        public virtual ICollection<Aluguer> Aluguers { get; set; }
     }
 }

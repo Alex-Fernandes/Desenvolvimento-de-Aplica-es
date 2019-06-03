@@ -13,36 +13,27 @@ namespace ProjetoDA
 {
     public partial class MenuCliente : Form
     {
-        private Model1Container ModelStand;
+        private ModelOficinaContainer ModelStand;
 
         public MenuCliente()
         {
             InitializeComponent();
 
-            ModelStand = new Model1Container();
+            ModelStand = new ModelOficinaContainer();
             (
-                from cliente in ModelStand.Clientes
+                from cliente in ModelStand.Cliente
                 orderby cliente.Nome
                 select cliente
             ).Load();
 
-            clienteBindingSource.DataSource = ModelStand.Clientes.Local.ToBindingList();
+            clienteBindingSource.DataSource = ModelStand.Cliente.Local.ToBindingList();
         }
 
-        //Guardar o cliente
         private void clienteBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             ModelStand.SaveChanges();
         }
 
-        private void btnFiltrar_Click(object sender, EventArgs e)
-        {
-            /* Nao Remover 
-             * dá erro se nao estiver aqui por alguma razão 
-             */
-        }
-
-        //Pesquisa por nome
         private void btnFiltrar_Click_1(object sender, EventArgs e)
         {
             if (textBoxFiltrar.Text.Length > 0)
@@ -50,28 +41,29 @@ namespace ProjetoDA
                 bindingNavigatorAddNewItem.Enabled = false;
 
                 ModelStand.Dispose();
-                ModelStand = new Model1Container();
+                ModelStand = new ModelOficinaContainer();
 
-                (from cliente in ModelStand.Clientes
+                (from cliente in ModelStand.Cliente
                  where cliente.Nome.ToUpper().Contains(textBoxFiltrar.Text.ToUpper())
                  orderby cliente.Nome
                  select cliente).ToList();
 
-                clienteBindingSource.DataSource = ModelStand.Clientes.Local.ToBindingList();
+                clienteBindingSource.DataSource = ModelStand.Cliente.Local.ToBindingList();
             }
             else
             {
                 bindingNavigatorAddNewItem.Enabled = true;
 
                 ModelStand.Dispose();
-                ModelStand = new Model1Container();
+                ModelStand = new ModelOficinaContainer();
 
-                (from cliente in ModelStand.Clientes
+                (from cliente in ModelStand.Cliente
                  orderby cliente.Nome
                  select cliente).Load();
 
-                clienteBindingSource.DataSource = ModelStand.Clientes.Local.ToBindingList();
+                clienteBindingSource.DataSource = ModelStand.Cliente.Local.ToBindingList();
             }
+            textBoxFiltrar.Text = String.Empty;
         }
     }
 }

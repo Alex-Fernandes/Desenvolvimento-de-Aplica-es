@@ -62,6 +62,7 @@
             this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abrirPastaDeRecibosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonServicos_Selecionar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -138,21 +139,22 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.buttonServicos_Selecionar);
             this.groupBox3.Controls.Add(this.buttonServicos_Criar);
             this.groupBox3.Controls.Add(this.comboBoxServicos);
             this.groupBox3.Controls.Add(this.listBoxServicos);
             this.groupBox3.Location = new System.Drawing.Point(459, 192);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(231, 422);
+            this.groupBox3.Size = new System.Drawing.Size(253, 422);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Serviços";
             // 
             // buttonServicos_Criar
             // 
-            this.buttonServicos_Criar.Location = new System.Drawing.Point(0, 394);
+            this.buttonServicos_Criar.Location = new System.Drawing.Point(6, 394);
             this.buttonServicos_Criar.Name = "buttonServicos_Criar";
-            this.buttonServicos_Criar.Size = new System.Drawing.Size(225, 23);
+            this.buttonServicos_Criar.Size = new System.Drawing.Size(111, 23);
             this.buttonServicos_Criar.TabIndex = 4;
             this.buttonServicos_Criar.Text = "Criar Serviço";
             this.buttonServicos_Criar.UseVisualStyleBackColor = true;
@@ -163,7 +165,7 @@
             this.comboBoxServicos.FormattingEnabled = true;
             this.comboBoxServicos.Location = new System.Drawing.Point(6, 366);
             this.comboBoxServicos.Name = "comboBoxServicos";
-            this.comboBoxServicos.Size = new System.Drawing.Size(219, 21);
+            this.comboBoxServicos.Size = new System.Drawing.Size(241, 21);
             this.comboBoxServicos.TabIndex = 1;
             // 
             // listBoxServicos
@@ -171,7 +173,7 @@
             this.listBoxServicos.FormattingEnabled = true;
             this.listBoxServicos.Location = new System.Drawing.Point(6, 19);
             this.listBoxServicos.Name = "listBoxServicos";
-            this.listBoxServicos.Size = new System.Drawing.Size(219, 342);
+            this.listBoxServicos.Size = new System.Drawing.Size(241, 342);
             this.listBoxServicos.TabIndex = 0;
             // 
             // groupBox4
@@ -182,18 +184,18 @@
             this.groupBox4.Controls.Add(this.textBoxParecelas_Descricao);
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Controls.Add(this.listBoxParecelas);
-            this.groupBox4.Location = new System.Drawing.Point(697, 191);
+            this.groupBox4.Location = new System.Drawing.Point(718, 192);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(286, 422);
+            this.groupBox4.Size = new System.Drawing.Size(265, 422);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Parecelas";
             // 
             // buttonParecelas_Criar
             // 
-            this.buttonParecelas_Criar.Location = new System.Drawing.Point(0, 393);
+            this.buttonParecelas_Criar.Location = new System.Drawing.Point(9, 393);
             this.buttonParecelas_Criar.Name = "buttonParecelas_Criar";
-            this.buttonParecelas_Criar.Size = new System.Drawing.Size(275, 23);
+            this.buttonParecelas_Criar.Size = new System.Drawing.Size(254, 23);
             this.buttonParecelas_Criar.TabIndex = 5;
             this.buttonParecelas_Criar.Text = "Criar Parecelas";
             this.buttonParecelas_Criar.UseVisualStyleBackColor = true;
@@ -201,7 +203,7 @@
             // 
             // textBoxParecelas_Valor
             // 
-            this.textBoxParecelas_Valor.Location = new System.Drawing.Point(90, 359);
+            this.textBoxParecelas_Valor.Location = new System.Drawing.Point(75, 350);
             this.textBoxParecelas_Valor.Name = "textBoxParecelas_Valor";
             this.textBoxParecelas_Valor.Size = new System.Drawing.Size(185, 20);
             this.textBoxParecelas_Valor.TabIndex = 4;
@@ -209,7 +211,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 359);
+            this.label2.Location = new System.Drawing.Point(6, 359);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 3;
@@ -217,7 +219,7 @@
             // 
             // textBoxParecelas_Descricao
             // 
-            this.textBoxParecelas_Descricao.Location = new System.Drawing.Point(90, 324);
+            this.textBoxParecelas_Descricao.Location = new System.Drawing.Point(75, 324);
             this.textBoxParecelas_Descricao.Name = "textBoxParecelas_Descricao";
             this.textBoxParecelas_Descricao.Size = new System.Drawing.Size(185, 20);
             this.textBoxParecelas_Descricao.TabIndex = 2;
@@ -236,7 +238,7 @@
             this.listBoxParecelas.FormattingEnabled = true;
             this.listBoxParecelas.Location = new System.Drawing.Point(6, 19);
             this.listBoxParecelas.Name = "listBoxParecelas";
-            this.listBoxParecelas.Size = new System.Drawing.Size(269, 303);
+            this.listBoxParecelas.Size = new System.Drawing.Size(254, 303);
             this.listBoxParecelas.TabIndex = 0;
             // 
             // label_nomeCliente
@@ -377,6 +379,15 @@
             this.abrirPastaDeRecibosToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.abrirPastaDeRecibosToolStripMenuItem.Text = "Abrir Pasta de Recibos";
             // 
+            // buttonServicos_Selecionar
+            // 
+            this.buttonServicos_Selecionar.Location = new System.Drawing.Point(137, 393);
+            this.buttonServicos_Selecionar.Name = "buttonServicos_Selecionar";
+            this.buttonServicos_Selecionar.Size = new System.Drawing.Size(110, 23);
+            this.buttonServicos_Selecionar.TabIndex = 5;
+            this.buttonServicos_Selecionar.Text = "Selecionar";
+            this.buttonServicos_Selecionar.UseVisualStyleBackColor = true;
+            // 
             // MenuOficina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,5 +461,6 @@
         private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem imprimirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem abrirPastaDeRecibosToolStripMenuItem;
+        private System.Windows.Forms.Button buttonServicos_Selecionar;
     }
 }

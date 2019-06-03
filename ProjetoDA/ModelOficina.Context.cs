@@ -13,10 +13,10 @@ namespace ProjetoDA
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Model1Container : DbContext
+    public partial class ModelOficinaContainer : DbContext
     {
-        public Model1Container()
-            : base("name=Model1Container")
+        public ModelOficinaContainer()
+            : base("name=ModelOficinaContainer")
         {
         }
     
@@ -25,11 +25,11 @@ namespace ProjetoDA
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Cliente> Clientes { get; set; }
-        public virtual DbSet<Venda> Vendas { get; set; }
-        public virtual DbSet<Carro> Carros { get; set; }
-        public virtual DbSet<Aluguer> Alugueres { get; set; }
-        public virtual DbSet<Parcela> Parcelas { get; set; }
+        public virtual DbSet<Cliente> Cliente { get; set; }
+        public virtual DbSet<Venda> Venda { get; set; }
+        public virtual DbSet<Aluguer> Aluguer { get; set; }
         public virtual DbSet<Servico> Servicos { get; set; }
+        public virtual DbSet<Parcela> Parcela { get; set; }
+        public virtual DbSet<Carro> Carro { get; set; }
     }
 }

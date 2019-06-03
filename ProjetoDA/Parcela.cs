@@ -17,7 +17,7 @@ namespace ProjetoDA
         public int IdParcela { get; set; }
         public string Valor { get; set; }
         public string Descricao { get; set; }
-        public string ServicoIdServicos { get; set; }
+        public int ServicoIdServico { get; set; }
     
         public virtual Servico Servico { get; set; }
     }

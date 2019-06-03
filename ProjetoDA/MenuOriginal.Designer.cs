@@ -59,11 +59,11 @@
             // 
             // button_Clientes
             // 
-            this.button_Clientes.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Clientes.BackColor = System.Drawing.SystemColors.Window;
             this.button_Clientes.Image = ((System.Drawing.Image)(resources.GetObject("button_Clientes.Image")));
             this.button_Clientes.Location = new System.Drawing.Point(46, 110);
             this.button_Clientes.Name = "button_Clientes";
-            this.button_Clientes.Size = new System.Drawing.Size(164, 139);
+            this.button_Clientes.Size = new System.Drawing.Size(150, 139);
             this.button_Clientes.TabIndex = 1;
             this.button_Clientes.UseVisualStyleBackColor = false;
             this.button_Clientes.Click += new System.EventHandler(this.button_Clientes_Click);
@@ -95,6 +95,7 @@
             this.button_Venda.Size = new System.Drawing.Size(137, 139);
             this.button_Venda.TabIndex = 4;
             this.button_Venda.UseVisualStyleBackColor = true;
+            this.button_Venda.Click += new System.EventHandler(this.button_Venda_Click);
             // 
             // statusStrip1
             // 

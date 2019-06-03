@@ -13,22 +13,22 @@ namespace ProjetoDA
 {
     public partial class AdicionarCarro : Form
     {
-		private Model1Container ModelStand;
+		private ModelOficinaContainer ModelStand;
 
         public AdicionarCarro()
         {
             InitializeComponent();
 
-		    ModelStand = new Model1Container();
+		    ModelStand = new ModelOficinaContainer();
 			(
-				from carro in ModelStand.Carros
+				from carro in ModelStand.Carro
 				orderby carro.NumeroChassis
 				select carro
 			).Load();
 
         
             //Mostar os carros
-			carroBindingSource.DataSource = ModelStand.Carros.Local.ToBindingList();
+			carroBindingSource.DataSource = ModelStand.Carro.Local.ToBindingList();
 		}
         
         //Botao para guardar
@@ -54,29 +54,29 @@ namespace ProjetoDA
                 bindingNavigatorAddNewItem.Enabled = false;
 
                 ModelStand.Dispose();
-                ModelStand = new Model1Container();
+                ModelStand = new ModelOficinaContainer();
 
-                (from carro in ModelStand.Carros
+                (from carro in ModelStand.Carro
                  where carro.NumeroChassis.ToUpper().Contains(textBoxFiltrar.Text.ToUpper())
                  orderby carro.NumeroChassis
                  select carro).ToList();
 
-                carroBindingSource.DataSource = ModelStand.Carros.Local.ToBindingList();
+                carroBindingSource.DataSource = ModelStand.Carro.Local.ToBindingList();
             }
             else
             {
                 bindingNavigatorAddNewItem.Enabled = true;
 
                 ModelStand.Dispose();
-                ModelStand = new Model1Container();
+                ModelStand = new ModelOficinaContainer();
 
                 (
-                    from carro in ModelStand.Carros
+                    from carro in ModelStand.Carro
                     orderby carro.NumeroChassis
                     select carro
                 ).Load();
 
-                carroBindingSource.DataSource = ModelStand.Clientes.Local.ToBindingList();
+                carroBindingSource.DataSource = ModelStand.Cliente.Local.ToBindingList();
             }
         }
 

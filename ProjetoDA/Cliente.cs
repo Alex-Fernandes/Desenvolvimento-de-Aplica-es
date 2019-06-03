@@ -17,9 +17,9 @@ namespace ProjetoDA
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Cliente()
         {
+            this.CarroOficinas = new HashSet<CarroOficina>();
+            this.Aluguers = new HashSet<Aluguer>();
             this.Vendas = new HashSet<Venda>();
-            this.Alugueres = new HashSet<Aluguer>();
-            this.CarrosOficina = new HashSet<CarroOficina>();
         }
     
         public int IdCliente { get; set; }
@@ -29,10 +29,10 @@ namespace ProjetoDA
         public string Contacto { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CarroOficina> CarroOficinas { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Aluguer> Aluguers { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Venda> Vendas { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Aluguer> Alugueres { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CarroOficina> CarrosOficina { get; set; }
     }
 }

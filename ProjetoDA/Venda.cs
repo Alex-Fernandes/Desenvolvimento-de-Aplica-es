@@ -14,13 +14,11 @@ namespace ProjetoDA
     
     public partial class Venda
     {
-        public int IdVenda { get; set; }
+        public int IdVendas { get; set; }
         public string Valor { get; set; }
         public string Estado { get; set; }
         public string Data { get; set; }
-        public string ClienteIdCliente { get; set; }
-        public int ClienteIdCliente1 { get; set; }
-        public int ClienteIdCliente2 { get; set; }
+        public int ClienteIdCliente { get; set; }
     
         public virtual Cliente Cliente { get; set; }
         public virtual CarroVenda CarroVenda { get; set; }

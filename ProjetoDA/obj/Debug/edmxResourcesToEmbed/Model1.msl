@@ -19,9 +19,6 @@
           <ScalarProperty Name="Valor" ColumnName="Valor" />
           <ScalarProperty Name="Estado" ColumnName="Estado" />
           <ScalarProperty Name="Data" ColumnName="Data" />
-          <ScalarProperty Name="ClienteIdCliente" ColumnName="ClienteIdCliente" />
-          <ScalarProperty Name="ClienteIdCliente1" ColumnName="ClienteIdCliente1" />
-          <ScalarProperty Name="ClienteIdCliente2" ColumnName="ClienteIdCliente2" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -40,8 +37,6 @@
           <ScalarProperty Name="IdCarro" ColumnName="IdCarro" />
           <ScalarProperty Name="Matricula" ColumnName="Matricula" />
           <ScalarProperty Name="Kms" ColumnName="Kms" />
-          <ScalarProperty Name="ClienteIdCliente" ColumnName="ClienteIdCliente" />
-          <ScalarProperty Name="ClienteIdCliente1" ColumnName="ClienteIdCliente1" />
         </MappingFragment>
       </EntityTypeMapping>
       <EntityTypeMapping TypeName="IsTypeOf(Model1.CarroAluguer)">
@@ -66,8 +61,6 @@
           <ScalarProperty Name="DataFim" ColumnName="DataFim" />
           <ScalarProperty Name="Valor" ColumnName="Valor" />
           <ScalarProperty Name="Kms" ColumnName="Kms" />
-          <ScalarProperty Name="ClienteIdCliente" ColumnName="ClienteIdCliente" />
-          <ScalarProperty Name="ClienteIdCliente1" ColumnName="ClienteIdCliente1" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

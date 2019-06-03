@@ -19,9 +19,12 @@ namespace ProjetoDA
             teste.Text = CalendarDtaSaida.SelectionRange.Start.ToShortDateString();
         }
 
+       // Model1Container ModelStand;
+
         private void buttonCriar_Click(object sender, EventArgs e)
         {
-
+          //  ModelStand = new Model1Container();
+            ////ModelStand.Servicos.Add();
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
