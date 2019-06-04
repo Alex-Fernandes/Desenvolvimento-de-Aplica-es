@@ -36,7 +36,7 @@
             this.textBoxTipoServico = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxDtaEntrada = new System.Windows.Forms.TextBox();
-            this.teste = new System.Windows.Forms.Label();
+            this.labelDtaSaida = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonCriar
@@ -73,6 +73,7 @@
             this.CalendarDtaSaida.Location = new System.Drawing.Point(8, 156);
             this.CalendarDtaSaida.Name = "CalendarDtaSaida";
             this.CalendarDtaSaida.TabIndex = 3;
+            this.CalendarDtaSaida.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.CalendarDtaSaida_DateChanged);
             // 
             // label2
             // 
@@ -106,21 +107,21 @@
             this.textBoxDtaEntrada.Size = new System.Drawing.Size(133, 20);
             this.textBoxDtaEntrada.TabIndex = 7;
             // 
-            // teste
+            // labelDtaSaida
             // 
-            this.teste.AutoSize = true;
-            this.teste.Location = new System.Drawing.Point(125, 134);
-            this.teste.Name = "teste";
-            this.teste.Size = new System.Drawing.Size(35, 13);
-            this.teste.TabIndex = 8;
-            this.teste.Text = "label4";
+            this.labelDtaSaida.AutoSize = true;
+            this.labelDtaSaida.Location = new System.Drawing.Point(105, 134);
+            this.labelDtaSaida.Name = "labelDtaSaida";
+            this.labelDtaSaida.Size = new System.Drawing.Size(10, 13);
+            this.labelDtaSaida.TabIndex = 8;
+            this.labelDtaSaida.Text = "-";
             // 
             // CriarServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(253, 365);
-            this.Controls.Add(this.teste);
+            this.Controls.Add(this.labelDtaSaida);
             this.Controls.Add(this.textBoxDtaEntrada);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxTipoServico);
@@ -146,6 +147,6 @@
 		private System.Windows.Forms.TextBox textBoxTipoServico;
 		private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxDtaEntrada;
-        private System.Windows.Forms.Label teste;
+        private System.Windows.Forms.Label labelDtaSaida;
     }
 }

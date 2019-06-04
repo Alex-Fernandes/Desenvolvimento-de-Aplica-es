@@ -139,3 +139,6 @@ C:\Outros\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\bin\Debug\EntityFramework.
 C:\Outros\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\obj\Debug\ProjetoDA.csproj.CopyComplete
 C:\Outros\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\obj\Debug\ProjetoDA.exe
 C:\Outros\Desenvolvimento-de-Aplica-es - V3\ProjetoDA\obj\Debug\ProjetoDA.pdb
+C:\Outros\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.AdicionarCarro.resources
+C:\Outros\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.CriarServico.resources
+C:\Outros\Desenvolvimento-de-Aplica-es\ProjetoDA\obj\Debug\ProjetoDA.MenuOriginalv2.resources

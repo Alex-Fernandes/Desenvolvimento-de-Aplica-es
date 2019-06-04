@@ -35,13 +35,13 @@
       <End Role="Aluguer" EntitySet="Aluguer" />
       <End Role="CarroAluguer" EntitySet="Carro_CarroAluguer" />
     </AssociationSet>
-    <AssociationSet Name="CarroOficinaServico" Association="ModelOficina.Store.CarroOficinaServico">
-      <End Role="CarroOficina" EntitySet="Carro_CarroOficina" />
-      <End Role="Servico" EntitySet="Servicos" />
-    </AssociationSet>
     <AssociationSet Name="ServicoParcela" Association="ModelOficina.Store.ServicoParcela">
       <End Role="Servico" EntitySet="Servicos" />
       <End Role="Parcela" EntitySet="Parcela" />
+    </AssociationSet>
+    <AssociationSet Name="CarroOficinaServico" Association="ModelOficina.Store.CarroOficinaServico">
+      <End Role="CarroOficina" EntitySet="Carro_CarroOficina" />
+      <End Role="Servico" EntitySet="Servicos" />
     </AssociationSet>
     <AssociationSet Name="FK_CarroOficina_inherits_Carro" Association="ModelOficina.Store.FK_CarroOficina_inherits_Carro">
       <End Role="Carro" EntitySet="Carro" />
@@ -202,18 +202,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="CarroOficinaServico">
-    <End Role="CarroOficina" Type="ModelOficina.Store.Carro_CarroOficina" Multiplicity="1" />
-    <End Role="Servico" Type="ModelOficina.Store.Servicos" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CarroOficina">
-        <PropertyRef Name="IdCarro" />
-      </Principal>
-      <Dependent Role="Servico">
-        <PropertyRef Name="CarroOficinaIdCarro" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="ServicoParcela">
     <End Role="Servico" Type="ModelOficina.Store.Servicos" Multiplicity="1" />
     <End Role="Parcela" Type="ModelOficina.Store.Parcela" Multiplicity="*" />
@@ -223,6 +211,18 @@
       </Principal>
       <Dependent Role="Parcela">
         <PropertyRef Name="ServicoIdServico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CarroOficinaServico">
+    <End Role="CarroOficina" Type="ModelOficina.Store.Carro_CarroOficina" Multiplicity="1" />
+    <End Role="Servico" Type="ModelOficina.Store.Servicos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CarroOficina">
+        <PropertyRef Name="IdCarro" />
+      </Principal>
+      <Dependent Role="Servico">
+        <PropertyRef Name="CarroOficinaIdCarro" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -299,13 +299,13 @@
             <End Role="Aluguer" EntitySet="Aluguer" />
             <End Role="CarroAluguer" EntitySet="Carro" />
           </AssociationSet>
-          <AssociationSet Name="CarroOficinaServico" Association="ModelOficina.CarroOficinaServico">
-            <End Role="CarroOficina" EntitySet="Carro" />
-            <End Role="Servico" EntitySet="Servicos" />
-          </AssociationSet>
           <AssociationSet Name="ServicoParcela" Association="ModelOficina.ServicoParcela">
             <End Role="Servico" EntitySet="Servicos" />
             <End Role="Parcela" EntitySet="Parcela" />
+          </AssociationSet>
+          <AssociationSet Name="CarroOficinaServico" Association="ModelOficina.CarroOficinaServico">
+            <End Role="CarroOficina" EntitySet="Carro" />
+            <End Role="Servico" EntitySet="Servicos" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Cliente">
@@ -351,7 +351,7 @@
           <Property Name="Kms" Type="String" Nullable="false" />
           <NavigationProperty Name="Cliente" Relationship="ModelOficina.ClienteCarroOficina" FromRole="CarroOficina" ToRole="Cliente" />
           <Property Name="ClienteIdCliente" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Servicoes" Relationship="ModelOficina.CarroOficinaServico" FromRole="CarroOficina" ToRole="Servico" />
+          <NavigationProperty Name="Servico" Relationship="ModelOficina.CarroOficinaServico" FromRole="CarroOficina" ToRole="Servico" />
         </EntityType>
         <EntityType Name="Servico">
           <Key>
@@ -361,9 +361,9 @@
           <Property Name="DataEntrada" Type="String" Nullable="false" />
           <Property Name="Tipo" Type="String" Nullable="false" />
           <Property Name="DataSaida" Type="String" Nullable="false" />
+          <NavigationProperty Name="Parcelas" Relationship="ModelOficina.ServicoParcela" FromRole="Servico" ToRole="Parcela" />
           <NavigationProperty Name="CarroOficina" Relationship="ModelOficina.CarroOficinaServico" FromRole="Servico" ToRole="CarroOficina" />
           <Property Name="CarroOficinaIdCarro" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Parcelas" Relationship="ModelOficina.ServicoParcela" FromRole="Servico" ToRole="Parcela" />
         </EntityType>
         <EntityType Name="Parcela">
           <Key>
@@ -438,18 +438,6 @@
           <End Type="ModelOficina.Aluguer" Role="Aluguer" Multiplicity="*" />
           <End Type="ModelOficina.CarroAluguer" Role="CarroAluguer" Multiplicity="1" />
         </Association>
-        <Association Name="CarroOficinaServico">
-          <End Type="ModelOficina.CarroOficina" Role="CarroOficina" Multiplicity="1" />
-          <End Type="ModelOficina.Servico" Role="Servico" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CarroOficina">
-              <PropertyRef Name="IdCarro" />
-            </Principal>
-            <Dependent Role="Servico">
-              <PropertyRef Name="CarroOficinaIdCarro" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="ServicoParcela">
           <End Type="ModelOficina.Servico" Role="Servico" Multiplicity="1" />
           <End Type="ModelOficina.Parcela" Role="Parcela" Multiplicity="*" />
@@ -459,6 +447,18 @@
             </Principal>
             <Dependent Role="Parcela">
               <PropertyRef Name="ServicoIdServico" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CarroOficinaServico">
+          <End Type="ModelOficina.CarroOficina" Role="CarroOficina" Multiplicity="1" />
+          <End Type="ModelOficina.Servico" Role="Servico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CarroOficina">
+              <PropertyRef Name="IdCarro" />
+            </Principal>
+            <Dependent Role="Servico">
+              <PropertyRef Name="CarroOficinaIdCarro" />
             </Dependent>
           </ReferentialConstraint>
         </Association>

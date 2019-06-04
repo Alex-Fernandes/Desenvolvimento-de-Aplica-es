@@ -9,13 +9,12 @@ namespace ProjetoDA
     public partial class Servico
     {
         
-        public Servico(int id, string dtaEntrada, string tipo, string dtaSaida,string idCarro)
+        public Servico(string dtaEntrada, string tipo, string dtaSaida, int CarroOficina)
         {
-            IdServico = id;
             DataEntrada = dtaEntrada;
             Tipo = tipo;
             DataSaida = dtaSaida;
-            //CarroOficinaIdCarroOficina = idCarro;
+            CarroOficinaIdCarro = CarroOficinaIdCarro;
         }
 
     }

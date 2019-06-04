@@ -22,8 +22,8 @@
         <InheritanceConnector EntityType="ModelOficina.CarroAluguer" />
         <InheritanceConnector EntityType="ModelOficina.CarroVenda" />
         <InheritanceConnector EntityType="ModelOficina.CarroOficina" />
-        <AssociationConnector Association="ModelOficina.CarroOficinaServico" />
         <AssociationConnector Association="ModelOficina.ServicoParcela" />
+        <AssociationConnector Association="ModelOficina.CarroOficinaServico" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

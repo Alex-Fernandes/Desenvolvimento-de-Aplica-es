@@ -17,7 +17,7 @@ namespace ProjetoDA
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CarroOficina()
         {
-            this.Servicoes = new HashSet<Servico>();
+            this.Servico = new HashSet<Servico>();
         }
     
         public string Matricula { get; set; }
@@ -26,6 +26,6 @@ namespace ProjetoDA
     
         public virtual Cliente Cliente { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Servico> Servicoes { get; set; }
+        public virtual ICollection<Servico> Servico { get; set; }
     }
 }

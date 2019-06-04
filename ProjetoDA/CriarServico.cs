@@ -12,25 +12,29 @@ namespace ProjetoDA
 {
 	public partial class CriarServico : Form
 	{
-		public CriarServico()
+        private ModelOficinaContainer ModelStand;
+
+        public CriarServico()
 		{
 			InitializeComponent();
             textBoxDtaEntrada.Text = DateTime.Now.ToString("d/M/yyyy");
-            teste.Text = CalendarDtaSaida.SelectionRange.Start.ToShortDateString();
+           
         }
-
-       // Model1Container ModelStand;
 
         private void buttonCriar_Click(object sender, EventArgs e)
         {
-          //  ModelStand = new Model1Container();
-            ////ModelStand.Servicos.Add();
+             ModelStand = new ModelOficinaContainer();
+            ModelStand.Servicos.Add(new Servico(textBoxDtaEntrada.Text, textBoxTipoServico.Text, labelDtaSaida.Text, '1'));
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
+        private void CalendarDtaSaida_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            labelDtaSaida.Text = CalendarDtaSaida.SelectionRange.Start.ToShortDateString();
+        }
     }
 }
