@@ -16,14 +16,16 @@ namespace ProjetoDA
     public partial class MenuOficina : Form
     {
         private ModelOficinaContainer ModelStand;
+        public Cliente cliente = null;
 
-        public MenuOficina()
+        public MenuOficina(MenuOriginal menu)
         {
-
+            
             InitializeComponent();
             ModelStand = new ModelOficinaContainer();
             LerDados_Select_Cilente();
             LerDados_Select_Carros();
+            LerDados_Select_Servicos();
 
         }
 
@@ -37,6 +39,14 @@ namespace ProjetoDA
         private void LerDados_Select_Carros()
         {
             listBoxCarro_Oficina.DataSource = ModelStand.Carro.ToList<Carro>();
+            // listBoxCarro_Oficina.DataSource = ModelStand.Carro.ToList<CarroOficina>();
+
+        }
+
+        //Ir buscar data dos serviços
+        private void LerDados_Select_Servicos()
+        {
+            listBoxServicos.DataSource = ModelStand.Servicos.ToList<Servico>();
         }
 
         //Mostrar os dados do utilzador nas labels
@@ -85,10 +95,11 @@ namespace ProjetoDA
             }
         }
 
-        //Fazer reload da listbox dos carros para ser atualizada quando o ultilizador sai do AdicionarCarro
+        //Fazer reload da listbox dos carros/servicos para ser atualizada quando o ultilizador sai dos Menus
         private void MenuOficina_Activated(object sender, EventArgs e)
         {
             LerDados_Select_Carros();
+            LerDados_Select_Servicos();
         }
 
         private void buttonParecelas_Criar_Click(object sender, EventArgs e)
@@ -106,6 +117,7 @@ namespace ProjetoDA
             textBoxParecelas_Valor.Text = "";
         }
 
+        //Mudar para adicionar um serviço
         private void buttonServicos_Criar_Click(object sender, EventArgs e)
         {
             CriarServico criarServico = new CriarServico();

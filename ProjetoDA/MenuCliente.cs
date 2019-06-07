@@ -14,11 +14,12 @@ namespace ProjetoDA
     public partial class MenuCliente : Form
     {
         private ModelOficinaContainer ModelStand;
+        public Cliente cliente = null;
 
-        public MenuCliente()
+
+        public MenuCliente(MenuOriginal menu)
         {
             InitializeComponent();
-
             ModelStand = new ModelOficinaContainer();
             (
                 from cliente in ModelStand.Cliente
@@ -26,7 +27,20 @@ namespace ProjetoDA
                 select cliente
             ).Load();
 
-            clienteBindingSource.DataSource = ModelStand.Cliente.Local.ToBindingList();
+            cliente = menu.cliente;
+        }
+
+        private void MenuCliente_Load(object sender, EventArgs e)
+        {
+            //clienteBindingSource.DataSource = ModelStand.Cliente.Local.ToBindingList();
+            try
+            {
+                cliente = clienteDataGridView.CurrentRow.DataBoundItem as Cliente;
+            }
+            catch
+            {
+                MessageBox.Show("errro Clientes");
+            }
         }
 
         private void clienteBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -65,5 +79,7 @@ namespace ProjetoDA
             }
             textBoxFiltrar.Text = String.Empty;
         }
+
+
     }
 }

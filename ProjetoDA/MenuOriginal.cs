@@ -12,6 +12,13 @@ namespace ProjetoDA
 {
     public partial class MenuOriginal : Form
     {
+        public Cliente cliente = new Cliente();
+        public Carro carro = new Carro();
+        public Aluguer aluguer = new Aluguer();
+        public Parcela parcela = new Parcela();
+        public Servico servico = new Servico();
+        public Venda venda = new Venda();
+
         public MenuOriginal()
         {
             InitializeComponent();
@@ -25,13 +32,13 @@ namespace ProjetoDA
 
         private void button_Clientes_Click(object sender, EventArgs e)
         {
-            MenuCliente menuCliente = new MenuCliente();
+            MenuCliente menuCliente = new MenuCliente(this);
             menuCliente.Show();
         }
 
         private void button_Oficina_Click(object sender, EventArgs e)
         {
-            MenuOficina menuOficina = new MenuOficina();
+            MenuOficina menuOficina = new MenuOficina(this);
             menuOficina.Show();
         }
 

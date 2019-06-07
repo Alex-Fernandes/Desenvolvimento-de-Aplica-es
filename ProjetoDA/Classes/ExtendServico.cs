@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoDA
 {
-    public partial class Servico
+    public partial class Servico : CarroOficina
     {
         
         public Servico(string dtaEntrada, string tipo, string dtaSaida, int CarroOficina)
@@ -14,7 +14,13 @@ namespace ProjetoDA
             DataEntrada = dtaEntrada;
             Tipo = tipo;
             DataSaida = dtaSaida;
-            CarroOficinaIdCarro = CarroOficinaIdCarro;
+            CarroOficinaIdCarro = CarroOficina;
+        }
+
+
+        public override string ToString()
+        {
+            return  Tipo + " de " + DataEntrada + " a " + DataSaida;
         }
 
     }

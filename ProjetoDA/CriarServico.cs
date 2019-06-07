@@ -23,8 +23,10 @@ namespace ProjetoDA
 
         private void buttonCriar_Click(object sender, EventArgs e)
         {
-             ModelStand = new ModelOficinaContainer();
-            ModelStand.Servicos.Add(new Servico(textBoxDtaEntrada.Text, textBoxTipoServico.Text, labelDtaSaida.Text, '1'));
+            ModelStand = new ModelOficinaContainer();
+            int num = 1;
+            ModelStand.Servicos.Add(new Servico(textBoxDtaEntrada.Text, textBoxTipoServico.Text, labelDtaSaida.Text, num));
+            ModelStand.SaveChanges();
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
