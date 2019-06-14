@@ -13,19 +13,20 @@ namespace ProjetoDA
 	public partial class CriarServico : Form
 	{
         private ModelOficinaContainer ModelStand;
+        public int CarroId;
 
-        public CriarServico()
+        public CriarServico(MenuOficina menuOficina)
 		{
 			InitializeComponent();
             textBoxDtaEntrada.Text = DateTime.Now.ToString("d/M/yyyy");
-           
+            CarroId = menuOficina.OficinaIDSelecionado;
         }
 
+        //guardar
         private void buttonCriar_Click(object sender, EventArgs e)
         {
             ModelStand = new ModelOficinaContainer();
-            int num = 1;
-            ModelStand.Servicos.Add(new Servico(textBoxDtaEntrada.Text, textBoxTipoServico.Text, labelDtaSaida.Text, num));
+            ModelStand.Servicos.Add(new Servico(textBoxDtaEntrada.Text, textBoxTipoServico.Text, labelDtaSaida.Text, CarroId));
             ModelStand.SaveChanges();
         }
 
@@ -34,6 +35,7 @@ namespace ProjetoDA
             this.Close();
         }
 
+        //para mostrar a data selecionada pelo utilizador
         private void CalendarDtaSaida_DateChanged(object sender, DateRangeEventArgs e)
         {
             labelDtaSaida.Text = CalendarDtaSaida.SelectionRange.Start.ToShortDateString();

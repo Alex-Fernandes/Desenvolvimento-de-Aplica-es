@@ -8,6 +8,7 @@ namespace ProjetoDA
 {
     public partial class Cliente
     {
+
         public override string ToString() 
         {
             return "Nome: " + Nome + " - NIF: " + NIF;

@@ -45,9 +45,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.clienteDataGridView = new System.Windows.Forms.DataGridView();
+            this.toolStripVendas = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripAluger = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -88,6 +88,7 @@
             this.button_Aluger.Size = new System.Drawing.Size(140, 139);
             this.button_Aluger.TabIndex = 3;
             this.button_Aluger.UseVisualStyleBackColor = true;
+            this.button_Aluger.Click += new System.EventHandler(this.button_Aluger_Click);
             // 
             // button_Venda
             // 
@@ -105,8 +106,10 @@
             this.toolStripStatusLabelData,
             this.toolStripStatusLabelHoras,
             this.toolStripStatusLabelTotalVendas,
-            this.toolStripStatusLabelTotalAlug});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 554);
+            this.toolStripVendas,
+            this.toolStripStatusLabelTotalAlug,
+            this.toolStripAluger});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 269);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(800, 22);
             this.statusStrip1.TabIndex = 5;
@@ -127,14 +130,14 @@
             // toolStripStatusLabelTotalVendas
             // 
             this.toolStripStatusLabelTotalVendas.Name = "toolStripStatusLabelTotalVendas";
-            this.toolStripStatusLabelTotalVendas.Size = new System.Drawing.Size(85, 17);
-            this.toolStripStatusLabelTotalVendas.Text = "Total vendas: 0";
+            this.toolStripStatusLabelTotalVendas.Size = new System.Drawing.Size(79, 17);
+            this.toolStripStatusLabelTotalVendas.Text = "Total vendas: ";
             // 
             // toolStripStatusLabelTotalAlug
             // 
             this.toolStripStatusLabelTotalAlug.Name = "toolStripStatusLabelTotalAlug";
-            this.toolStripStatusLabelTotalAlug.Size = new System.Drawing.Size(96, 17);
-            this.toolStripStatusLabelTotalAlug.Text = "Total alugados: 0";
+            this.toolStripStatusLabelTotalAlug.Size = new System.Drawing.Size(90, 17);
+            this.toolStripStatusLabelTotalAlug.Text = "Total alugados: ";
             // 
             // timer1
             // 
@@ -182,20 +185,23 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Gestão Venda";
             // 
-            // clienteDataGridView
+            // toolStripVendas
             // 
-            this.clienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.clienteDataGridView.Location = new System.Drawing.Point(152, 290);
-            this.clienteDataGridView.Name = "clienteDataGridView";
-            this.clienteDataGridView.Size = new System.Drawing.Size(442, 204);
-            this.clienteDataGridView.TabIndex = 10;
+            this.toolStripVendas.Name = "toolStripVendas";
+            this.toolStripVendas.Size = new System.Drawing.Size(13, 17);
+            this.toolStripVendas.Text = "0";
+            // 
+            // toolStripAluger
+            // 
+            this.toolStripAluger.Name = "toolStripAluger";
+            this.toolStripAluger.Size = new System.Drawing.Size(13, 17);
+            this.toolStripAluger.Text = "0";
             // 
             // MenuOriginal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 576);
-            this.Controls.Add(this.clienteDataGridView);
+            this.ClientSize = new System.Drawing.Size(800, 291);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -210,7 +216,6 @@
             this.Text = "RealStand";
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,7 +238,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView clienteDataGridView;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripVendas;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripAluger;
     }
 }
 

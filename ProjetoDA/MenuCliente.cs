@@ -14,12 +14,14 @@ namespace ProjetoDA
     public partial class MenuCliente : Form
     {
         private ModelOficinaContainer ModelStand;
-        public Cliente cliente = null;
-
+        public Cliente cliente;
+        List<Cliente> listClientes = new List<Cliente>();
 
         public MenuCliente(MenuOriginal menu)
         {
             InitializeComponent();
+            ModelStand = menu.model;
+                       
             ModelStand = new ModelOficinaContainer();
             (
                 from cliente in ModelStand.Cliente
@@ -30,24 +32,30 @@ namespace ProjetoDA
             cliente = menu.cliente;
         }
 
+        //Carregar os clientes
         private void MenuCliente_Load(object sender, EventArgs e)
-        {
-            //clienteBindingSource.DataSource = ModelStand.Cliente.Local.ToBindingList();
+        { 
             try
             {
-                cliente = clienteDataGridView.CurrentRow.DataBoundItem as Cliente;
+                clienteBindingSource.DataSource = ModelStand.Cliente.Local.ToBindingList();
+                // a maneira com objetos
+                //cliente = clienteDataGridView.CurrentRow.DataBoundItem as Cliente;
+                ///// a maneira com list
+                //listClientes = (from matricula in ModelStand.Carro.OfType<CarroOficina>() select matricula).ToList();
+                //clienteDataGridView.DataSource = listClientes;
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("errro Clientes");
+                MessageBox.Show("Clientes "+ ex);
             }
         }
-
+        //Guardar os dados
         private void clienteBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             ModelStand.SaveChanges();
         }
 
+        //Pesquisa por nome
         private void btnFiltrar_Click_1(object sender, EventArgs e)
         {
             if (textBoxFiltrar.Text.Length > 0)

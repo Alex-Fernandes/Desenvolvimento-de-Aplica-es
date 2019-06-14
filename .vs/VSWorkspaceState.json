@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ProjetoDA"
+    "\\ProjetoDA",
+    "\\ProjetoDA\\Classes",
+    "\\ProjetoDA\\Imagens"
   ],
-  "SelectedNode": "\\ProjetoDA\\AdicionarCarro.cs",
+  "SelectedNode": "\\ProjetoDA\\Classes\\ExCarro.cs",
   "PreviewInSolutionExplorer": false
 }

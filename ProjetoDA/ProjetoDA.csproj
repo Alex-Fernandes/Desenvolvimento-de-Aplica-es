@@ -71,17 +71,35 @@
     <Compile Include="CarroAluguer.cs">
       <DependentUpon>ModelOficina.tt</DependentUpon>
     </Compile>
+    <Compile Include="CarroDisponivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarroDisponivel.Designer.cs">
+      <DependentUpon>CarroDisponivel.cs</DependentUpon>
+    </Compile>
     <Compile Include="CarroOficina.cs">
       <DependentUpon>ModelOficina.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarrosVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarrosVenda.Designer.cs">
+      <DependentUpon>CarrosVenda.cs</DependentUpon>
     </Compile>
     <Compile Include="CarroVenda.cs">
       <DependentUpon>ModelOficina.tt</DependentUpon>
     </Compile>
-    <Compile Include="Classes\ExtendCarro.cs" />
-    <Compile Include="Classes\ExtendCliente.cs">
+    <Compile Include="Classes\CarroAluga.cs" />
+    <Compile Include="Classes\CarroVenda.cs" />
+    <Compile Include="Classes\ExAluguer.cs" />
+    <Compile Include="Classes\ExCarroOficina.cs" />
+    <Compile Include="Classes\ExCarro.cs" />
+    <Compile Include="Classes\ExCliente.cs">
       <CustomToolNamespace>Client</CustomToolNamespace>
     </Compile>
-    <Compile Include="Classes\ExtendServico.cs" />
+    <Compile Include="Classes\ExParcelas.cs" />
+    <Compile Include="Classes\ExServico.cs" />
+    <Compile Include="Classes\ExVenda.cs" />
     <Compile Include="Cliente.cs">
       <DependentUpon>ModelOficina.tt</DependentUpon>
     </Compile>
@@ -90,6 +108,12 @@
     </Compile>
     <Compile Include="CriarServico.Designer.cs">
       <DependentUpon>CriarServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAluguer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAluguer.Designer.cs">
+      <DependentUpon>MenuAluguer.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuOriginalv2.cs">
       <SubType>Form</SubType>
@@ -115,6 +139,12 @@
     <Compile Include="MenuOficina.Designer.cs">
       <DependentUpon>MenuOficina.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuVenda.Designer.cs">
+      <DependentUpon>MenuVenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModelOficina.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -130,6 +160,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelOficina.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ModelOficinaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelOficinaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ModelOficinaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelOficinaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ModelOficinaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelOficinaDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Parcela.cs">
       <DependentUpon>ModelOficina.tt</DependentUpon>
     </Compile>
@@ -144,8 +189,17 @@
     <EmbeddedResource Include="AdicionarCarro.resx">
       <DependentUpon>AdicionarCarro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CarroDisponivel.resx">
+      <DependentUpon>CarroDisponivel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarrosVenda.resx">
+      <DependentUpon>CarrosVenda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CriarServico.resx">
       <DependentUpon>CriarServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAluguer.resx">
+      <DependentUpon>MenuAluguer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuOriginalv2.resx">
       <DependentUpon>MenuOriginalv2.cs</DependentUpon>
@@ -159,6 +213,9 @@
     <EmbeddedResource Include="MenuOriginal.resx">
       <DependentUpon>MenuOriginal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MenuVenda.resx">
+      <DependentUpon>MenuVenda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -170,6 +227,39 @@
     </EntityDeploy>
     <None Include="ModelOficina.edmx.diagram">
       <DependentUpon>ModelOficina.edmx</DependentUpon>
+    </None>
+    <None Include="ModelOficinaDataSet.xsc">
+      <DependentUpon>ModelOficinaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ModelOficinaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ModelOficinaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ModelOficinaDataSet.xss">
+      <DependentUpon>ModelOficinaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ModelOficinaDataSet1.xsc">
+      <DependentUpon>ModelOficinaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ModelOficinaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ModelOficinaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ModelOficinaDataSet1.xss">
+      <DependentUpon>ModelOficinaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ModelOficinaDataSet2.xsc">
+      <DependentUpon>ModelOficinaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ModelOficinaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ModelOficinaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ModelOficinaDataSet2.xss">
+      <DependentUpon>ModelOficinaDataSet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Carro.datasource" />
@@ -196,6 +286,9 @@
     <None Include="Imagens\clientes.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Imagens\aluger_.jpg" />
+    <Content Include="Imagens\oficina.jpg" />
+    <Content Include="Imagens\venda.jpg" />
     <Content Include="ModelOficina.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModelOficina.Context.cs</LastGenOutput>

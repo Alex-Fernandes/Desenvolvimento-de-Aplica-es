@@ -37,7 +37,6 @@
             this.listBoxCarro_Oficina = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.buttonServicos_Criar = new System.Windows.Forms.Button();
-            this.comboBoxServicos = new System.Windows.Forms.ComboBox();
             this.listBoxServicos = new System.Windows.Forms.ListBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.buttonParecelas_Criar = new System.Windows.Forms.Button();
@@ -62,7 +61,7 @@
             this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abrirPastaDeRecibosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buttonServicos_Selecionar = new System.Windows.Forms.Button();
+            this.btnFatura = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -136,12 +135,11 @@
             this.listBoxCarro_Oficina.Name = "listBoxCarro_Oficina";
             this.listBoxCarro_Oficina.Size = new System.Drawing.Size(245, 368);
             this.listBoxCarro_Oficina.TabIndex = 0;
+            this.listBoxCarro_Oficina.SelectedIndexChanged += new System.EventHandler(this.listBoxCarro_Oficina_SelectedIndexChanged);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.buttonServicos_Selecionar);
             this.groupBox3.Controls.Add(this.buttonServicos_Criar);
-            this.groupBox3.Controls.Add(this.comboBoxServicos);
             this.groupBox3.Controls.Add(this.listBoxServicos);
             this.groupBox3.Location = new System.Drawing.Point(459, 192);
             this.groupBox3.Name = "groupBox3";
@@ -154,27 +152,20 @@
             // 
             this.buttonServicos_Criar.Location = new System.Drawing.Point(6, 394);
             this.buttonServicos_Criar.Name = "buttonServicos_Criar";
-            this.buttonServicos_Criar.Size = new System.Drawing.Size(111, 23);
+            this.buttonServicos_Criar.Size = new System.Drawing.Size(241, 23);
             this.buttonServicos_Criar.TabIndex = 4;
             this.buttonServicos_Criar.Text = "Criar Serviço";
             this.buttonServicos_Criar.UseVisualStyleBackColor = true;
             this.buttonServicos_Criar.Click += new System.EventHandler(this.buttonServicos_Criar_Click);
-            // 
-            // comboBoxServicos
-            // 
-            this.comboBoxServicos.FormattingEnabled = true;
-            this.comboBoxServicos.Location = new System.Drawing.Point(6, 366);
-            this.comboBoxServicos.Name = "comboBoxServicos";
-            this.comboBoxServicos.Size = new System.Drawing.Size(241, 21);
-            this.comboBoxServicos.TabIndex = 1;
             // 
             // listBoxServicos
             // 
             this.listBoxServicos.FormattingEnabled = true;
             this.listBoxServicos.Location = new System.Drawing.Point(6, 19);
             this.listBoxServicos.Name = "listBoxServicos";
-            this.listBoxServicos.Size = new System.Drawing.Size(241, 342);
+            this.listBoxServicos.Size = new System.Drawing.Size(241, 368);
             this.listBoxServicos.TabIndex = 0;
+            this.listBoxServicos.SelectedIndexChanged += new System.EventHandler(this.listBoxServicos_SelectedIndexChanged);
             // 
             // groupBox4
             // 
@@ -379,20 +370,22 @@
             this.abrirPastaDeRecibosToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.abrirPastaDeRecibosToolStripMenuItem.Text = "Abrir Pasta de Recibos";
             // 
-            // buttonServicos_Selecionar
+            // btnFatura
             // 
-            this.buttonServicos_Selecionar.Location = new System.Drawing.Point(137, 393);
-            this.buttonServicos_Selecionar.Name = "buttonServicos_Selecionar";
-            this.buttonServicos_Selecionar.Size = new System.Drawing.Size(110, 23);
-            this.buttonServicos_Selecionar.TabIndex = 5;
-            this.buttonServicos_Selecionar.Text = "Selecionar";
-            this.buttonServicos_Selecionar.UseVisualStyleBackColor = true;
+            this.btnFatura.Location = new System.Drawing.Point(845, 163);
+            this.btnFatura.Name = "btnFatura";
+            this.btnFatura.Size = new System.Drawing.Size(114, 23);
+            this.btnFatura.TabIndex = 15;
+            this.btnFatura.Text = "Imprimir Fatura";
+            this.btnFatura.UseVisualStyleBackColor = true;
+            this.btnFatura.Click += new System.EventHandler(this.btnFatura_Click);
             // 
             // MenuOficina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 618);
+            this.Controls.Add(this.btnFatura);
             this.Controls.Add(this.label_MoradaCliente);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -434,7 +427,6 @@
         private System.Windows.Forms.Button buttonOficina_adicionar;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button buttonServicos_Criar;
-        private System.Windows.Forms.ComboBox comboBoxServicos;
         private System.Windows.Forms.ListBox listBoxServicos;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button buttonParecelas_Criar;
@@ -461,6 +453,6 @@
         private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem imprimirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem abrirPastaDeRecibosToolStripMenuItem;
-        private System.Windows.Forms.Button buttonServicos_Selecionar;
+        private System.Windows.Forms.Button btnFatura;
     }
 }

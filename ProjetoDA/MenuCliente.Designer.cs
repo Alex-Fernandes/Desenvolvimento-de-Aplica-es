@@ -355,7 +355,7 @@
             this.groupBox2.Size = new System.Drawing.Size(460, 286);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Clientes";
             // 
             // MenuCliente
             // 

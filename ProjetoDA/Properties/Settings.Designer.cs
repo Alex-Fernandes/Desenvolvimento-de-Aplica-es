@@ -22,5 +22,16 @@ namespace ProjetoDA.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-LCUT7MN;Initial Catalog=ModelOficina;Integrated Security=True" +
+            "")]
+        public string ModelOficinaConnection {
+            get {
+                return ((string)(this["ModelOficinaConnection"]));
+            }
+        }
     }
 }
